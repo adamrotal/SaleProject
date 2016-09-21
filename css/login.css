@@ -42,6 +42,9 @@ a{
 	text-decoration: none;
 }
 
+hr{
+	border: solid black 1px;
+}
 .logo{
 	height: 65px;
 	margin-bottom: 50px;
