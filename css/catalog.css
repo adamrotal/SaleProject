@@ -15,27 +15,34 @@ body{
 }
 
 hr{
-	margin-bottom: 30px;
-	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
-input[type="text"],input[type="password"]{
-	width: 100%;
-	margin-bottom: 30px;
-	margin-top: 5px;
-	height: 27px;
-	border-radius: 0px;
-	border: solid black 1px;
+input[type="text"]{
+	width: 90%;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	height: 40px;
+	border-radius: 10px;
+	border: solid black 0px;
+	background-color: #E1E1E1; 
+	padding-left: 10px;
 }
 
-input[type="submit"]{
+#searching{
 	border-radius: 0px;
 	height: 40px;
-	width: 80px;
+	width: 55px;
 	border: 0px;
+	border-radius: 10px;
 	color: white;
 	background-color: #a902b3;
 	float: right;
+}
+
+#searching:hover {
+	background-color: #660066;
 }
 
 a{
@@ -63,13 +70,13 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 43px;
     text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: #660066;
 }	
 
 .logo{
@@ -77,7 +84,80 @@ li a:hover {
 	margin-bottom: 50px;
 }
 
+#searchNradio {
+	margin-top: 20px;
+}
+
 #userLogOut{
 	text-align: right;
 	margin-bottom: 30px;
+}
+
+#radio {
+	text-align: left;
+	height: 100%;
+	width: 30%;
+	vertical-align: bottom;
+	padding-left: 10px;
+}
+
+.catalog {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.fotoProduk {
+	height: 100px;
+	width: 100px;
+}
+
+#produk {
+	width: 100%;
+}
+
+#foto {
+	width: 30%;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#deskripsi {
+	width: 50%;
+}
+
+#data {
+	text-align: center;
+	width: 20%;
+}
+
+#likeButton {
+	border-radius: 0px;
+	height: 40px;
+	width: 55px;
+	border: 0px;
+	border-radius: 0px;
+	color: blue;
+	font-weight: bold;
+	margin-right: 10px;
+	background-color: transparent;
+}
+
+#buyButton {
+	border-radius: 0px;
+	height: 40px;
+	width: 55px;
+	border: 0px;
+	border-radius: 0px;
+	color: green;
+	font-weight: bold;
+	margin-left: 10px;
+	background-color: transparent;
+}
+
+#likeButton:hover {
+	color: #a902b3;
+}
+
+#buyButton:hover {
+	color: #a902b3;
 }
