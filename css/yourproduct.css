@@ -14,11 +14,11 @@ body{
 	overflow: hidden;
 }
 
+
 hr{
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
-
 
 a{
 	text-decoration: none;
@@ -64,51 +64,6 @@ ul.navig li a.active {
 	margin-bottom: 50px;
 }
 
-input[type="text"]{
-	width: 90%;
-	margin-bottom: 10px;
-	margin-top: 0px;
-	height: 40px;
-	border-radius: 10px;
-	border: solid black 0px;
-	background-color: #E1E1E1; 
-	padding-left: 10px;
-	float: left;
-}
-
-#searching{
-	border-radius: 0px;
-	height: 40px;
-	width: 55px;
-	border: 0px;
-	border-radius: 10px;
-	color: white;
-	background-color: #a902b3;
-	margin-left: 10px;
-}
-
-#searching:hover {
-	background-color: #660066;
-}
-
-.searchbox {
-	margin-top: 20px;
-	overflow: auto;
-}
-
-.byRadio {
-	overflow: auto;
-	margin-left: 20px;
-}
-
-#by {
-	float: left;
-}
-
-#radioButton {
-	margin-left: 30px;
-}
-
 #userLogOut{
 	text-align: right;
 	margin-bottom: 30px;
@@ -152,25 +107,25 @@ input[type="text"]{
 	width: 20%;
 }
 
-#likeButton {
+#editButton {
 	border-radius: 0px;
 	height: 40px;
 	width: 55px;
 	border: 0px;
 	border-radius: 0px;
-	color: blue;
+	color: orange;
 	font-weight: bold;
 	margin-right: 10px;
 	background-color: transparent;
 }
 
-#buyButton {
+#deleteButton {
 	border-radius: 0px;
 	height: 40px;
 	width: 55px;
 	border: 0px;
 	border-radius: 0px;
-	color: green;
+	color: red;
 	font-weight: bold;
 	margin-left: 10px;
 	background-color: transparent;
