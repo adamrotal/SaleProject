@@ -8,15 +8,16 @@ body{
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	height: 100%;
 	width: 100%;
-	padding-left: 20%;
+	padding-left: 15%;
 	padding-top: 5%;
-	padding-right: 20%;
+	padding-right: 15%;
 	overflow: hidden;
 }
 
 hr{
 	margin-bottom: 10px;
 	margin-top: 10px;
+	border: solid black 1px;
 }
 
 
@@ -30,24 +31,25 @@ ul.navig {
     padding: 0;
     overflow: auto;
     background-color: #a902b3;
-    size: 100%;
+    
 }
 
 ul.navig li {
+	width: 19.9%;
     float: left;
-    border-right: 1px solid #ffffff
+    border-right: 1px solid #ffffff;
 }
 
 ul.navig li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 43px;
+    padding: 14px 20px;
     text-decoration: none;
 }
 
 ul.navig li:last-child {
-	float: right;
+	
 	border-right: none;
 }
 
@@ -69,11 +71,14 @@ input[type="text"]{
 	margin-bottom: 10px;
 	margin-top: 0px;
 	height: 40px;
-	border-radius: 10px;
 	border: solid black 0px;
 	background-color: #E1E1E1; 
 	padding-left: 10px;
 	float: left;
+}
+
+input[type="button"]{
+	border-radius: 0px;
 }
 
 #searching{
@@ -81,7 +86,6 @@ input[type="text"]{
 	height: 40px;
 	width: 55px;
 	border: 0px;
-	border-radius: 10px;
 	color: white;
 	background-color: #a902b3;
 	margin-left: 10px;
