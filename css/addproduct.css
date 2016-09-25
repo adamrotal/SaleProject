@@ -1,0 +1,102 @@
+body{
+	font-family: 'Raleway',sans-serif;
+}
+
+.container{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	height: 100%;
+	width: 100%;
+	padding-left: 20%;
+	padding-top: 5%;
+	padding-right: 20%;
+	overflow: hidden;
+}
+
+
+hr{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul.navig {
+    list-style-type: none;
+    margin-bottom: 30px;
+    padding: 0;
+    overflow: auto;
+    background-color: #a902b3;
+    size: 100%;
+}
+
+ul.navig li {
+    float: left;
+    border-right: 1px solid #ffffff
+}
+
+ul.navig li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 43px;
+    text-decoration: none;
+}
+
+ul.navig li:last-child {
+	float: right;
+	border-right: none;
+}
+
+ul.navig li a:hover:not(.active) {
+	background-color: #660066;
+}
+
+ul.navig li a.active {
+	background-color: #660066;
+}	
+
+.logo{
+	height: 65px;
+	margin-bottom: 50px;
+}
+
+#userLogOut{
+	text-align: right;
+	margin-bottom: 30px;
+}
+
+input#name, input#price {
+	width: 99%;
+	height: 30px;
+	padding-left: 10px;
+	font-size: 25px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+textarea#description {
+	width: 99%;
+	height: 90px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+button[type="submit"], button[type="cancel"]{
+	border-radius: 5px;
+	height: 40px;
+	width: 100px;
+	border: 0px;
+	color: white;
+	background-color: #a902b3;
+	margin-left: 20px;
+	float: right;
+}
+
+button[type="submit"]:hover, button[type="cancel"]:hover{
+	background-color: #660066;
+}
