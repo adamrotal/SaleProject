@@ -14,11 +14,11 @@
 			<b><a href="#">logout</a></b>
 		</div>
 		<ul class="navig">
-			<li><a href="<?php RoutingDashboard('getCatalog.php',$result);?>">Catalog</a></li>
-			<li><a href="<?php RoutingDashboard('getProduk.php',$result);?>">Your Product</a></li>
-			<li><a href="<?php RoutingDashboard('getAddProduct.php',$result);?>">Add Product</a></li>
-			<li><a href="<?php RoutingDashboard('getSales.php',$result);?>">Sales</a></li>
-			<li><a href="<?php RoutingDashboard('getPurchase.php',$result);?>">Purchases</a></li>
+			<li><a href="<?php RoutingDashboard('getCatalog.php');?>">Catalog</a></li>
+			<li><a href="<?php RoutingDashboard('getProduk.php');?>">Your Product</a></li>
+			<li><a href="<?php RoutingDashboard('getAddProduct.php');?>">Add Product</a></li>
+			<li><a href="<?php RoutingDashboard('getSales.php');?>">Sales</a></li>
+			<li><a href="<?php RoutingDashboard('getPurchase.php');?>">Purchases</a></li>
 		</ul>
 		<h1>Please update your product here</h1>
 		<hr>
