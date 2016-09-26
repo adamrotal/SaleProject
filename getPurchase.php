@@ -4,5 +4,5 @@
 		header($redirectUrl);
 		die();
 	}
-	require $_SERVER["DOCUMENT_ROOT"]."/html/catalog.php";
+	require $_SERVER["DOCUMENT_ROOT"]."/html/purchase.php";
 ?>
