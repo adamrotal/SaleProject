@@ -11,7 +11,7 @@
 		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
 		<h2>Please Login</h2>
 		<hr>
-		<form action="login.php">
+		<form action="postLogin.php" method="post">
 			<b>Email or Username</b><br>
 			<input type="text" name="email"><br>
 			<b>Password</b><br>

@@ -10,15 +10,13 @@
 	
 	$result = selectDataFromDB($query);
 	
-	if($result != null){
-		$redirectUrl = 'Location: '.$_SERVER['HTTP_HOST'].'/getRegister.php';
+	if($result == null){
+		$redirectUrl = 'Location: '.$ServerRoot.'/getLogin.php';
 		header($redirectUrl);
 		die();
 	}else{
-		$query = "INSERT INTO user(fullName,username,email,password,fullAddress,postalCode,phoneNumber) VALUES('$fullName','$username','$email','$password','$fullAddress','$postalCode','$phoneNumber')";
-
-		$result = insertDataToDB($query);
-		$redirectUrl = 'Location: '.$_SERVER['HTTP_HOST'].'/getCatalog.php?id_active='.$result;
+		$result = $result->fetch_assoc();
+		$redirectUrl = 'Location: '.$ServerRoot.'/getCatalog.php?id_active='.$result['id'];
 		header($redirectUrl);
 		die();	
 	}
