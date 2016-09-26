@@ -1,26 +1,7 @@
 <?php
-	require "database/insertToDB.php";
-	require "database/getFromDB.php";
-	require 'app/routing.php';
-	require "config.php";
-	if (isset($_GET["id_active"])) {
-		$id = $_GET["id_active"];
-		$query = "SELECT * FROM user WHERE id = '$id'";
-		
-		$result = selectDataFromDB($query);
+	require "include.php";
 
-		if ($result == null) {
-			$redirectUrl = 'Location: '.$ServerRoot.'/getLogin.php';
-			header($redirectUrl);
-			die();			
-		} else {
-			$result = $result->fetch_assoc();
-		}
+	$user = authentification();
+	require $DocumentRoot."/html/yourproduct.php";
 
-		require $DocumentRoot."/html/yourproduct.php";
-	} else {
-		$redirectUrl = 'Location: '.$ServerRoot.'/getLogin.php';
-		header($redirectUrl);
-		die();
-	}
 ?>
