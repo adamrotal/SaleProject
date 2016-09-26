@@ -1,6 +1,6 @@
 <?php
 
-	require "config.php";
+	require "database/config.php";
 	
 	function insertDataToDB($query){
 		global $servername, $usernameDatabase, $passwordDatabase, $dbname;

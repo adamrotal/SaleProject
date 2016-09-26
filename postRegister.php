@@ -23,7 +23,7 @@
 		$query = "INSERT INTO user(fullName,username,email,password,fullAddress,postalCode,phoneNumber) VALUES('$fullName','$username','$email','$password','$fullAddress','$postalCode','$phoneNumber')";
 
 		$result = insertDataToDB($query);
-		$redirectUrl = 'Location: http://'.$ServerRoot.'/getCatalog.php?id_active='.$result;
+		$redirectUrl = 'Location: '.$ServerRoot.'/getCatalog.php?id_active='.$result;
 		header($redirectUrl);
 		die();	
 	}

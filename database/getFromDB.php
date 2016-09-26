@@ -1,9 +1,9 @@
 <?php
-	require "config.php";
+	require "database/config.php";
 
 	function selectDataFromDB($query){
 		global $servername, $usernameDatabase, $passwordDatabase, $dbname;
-	
+		echo $usernameDatabase.'apapa';
 		// Create connection
 		$conn = new mysqli($servername, $usernameDatabase, $passwordDatabase, $dbname);
 		
