@@ -10,15 +10,15 @@
 	<div class="container">
 		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
 		<div id="userLogOut">	
-			<b>Hi, USERNAME!</b><br>
+			<b>Hi, <?php echo $result["username"];?>!</b><br>
 			<b><a href="#">logout</a></b>
 		</div>
 		<ul class="navig">
-			<li><a href="#">Catalog</a></li>
-			<li><a href="#">Your Product</a></li>
-			<li><a class="active" href="#">Add Product</a></li>
-			<li><a href="#">Sales</a></li>
-			<li><a href="#">Purchases</a></li>
+			<li><a href="<?php RoutingDashboard('getCatalog.php',$result);?>">Catalog</a></li>
+			<li><a href="<?php RoutingDashboard('getProduk.php',$result);?>">Your Product</a></li>
+			<li><a class="active" href="<?php RoutingDashboard('getAddProduct.php',$result);?>">Add Product</a></li>
+			<li><a href="<?php RoutingDashboard('getSales.php',$result);?>">Sales</a></li>
+			<li><a href="<?php RoutingDashboard('getPurchase.php',$result);?>">Purchases</a></li>
 		</ul>
 		<h1>Please add your product here</h1>
 		<hr>

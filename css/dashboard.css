@@ -168,7 +168,7 @@ input[type="button"]{
 	padding-left: 10px;
 }
 
-.catalog {
+.catalog, .sales, .purchases {
 	margin-top: 50px;
 	margin-bottom: 20px;
 }

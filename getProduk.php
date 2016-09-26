@@ -17,7 +17,7 @@
 			$result = $result->fetch_assoc();
 		}
 
-		require $DocumentRoot."/html/confirmation_purchase.php";
+		require $DocumentRoot."/html/yourproduct.php";
 	} else {
 		$redirectUrl = 'Location: '.$ServerRoot.'/getLogin.php';
 		header($redirectUrl);

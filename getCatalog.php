@@ -1,6 +1,7 @@
 <?php
 	require "database/insertToDB.php";
 	require "database/getFromDB.php";
+	require 'app/routing.php';
 	require "config.php";
 	if (isset($_GET["id_active"])) {
 		$id = $_GET["id_active"];
