@@ -66,8 +66,28 @@ ul.navig li a.active {
 	margin-bottom: 50px;
 }
 
+.product{
+	margin-right: 40px
+}
+
+.price{
+	margin-right: 60px
+}
+
+.qual{
+	margin-right: 45px
+}
+
+.totalprice{
+	margin-right: 20px
+}
+
+.del{
+	margin-right: 15px
+}
+
 input[type="text"]{
-	width: 90%;
+	width: 100%;
 	margin-bottom: 10px;
 	margin-top: 0px;
 	height: 40px;
@@ -75,6 +95,28 @@ input[type="text"]{
 	background-color: #E1E1E1; 
 	padding-left: 10px;
 	float: left;
+	vertical-align: top;
+}
+
+input[type="longtext"]{
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	height: 70px;
+	border: solid black 0px;
+	background-color: #E1E1E1; 
+	padding-left: 10px;
+	float: left;
+	vertical-align: top;
+}
+
+input[type="qual"]{
+	width: 5%;
+	margin-top: 0px;
+	height: 20px;
+	border: solid black 0px;
+	background-color: #E1E1E1; 
+	padding-left: 10px;
 }
 
 input[type="button"]{
