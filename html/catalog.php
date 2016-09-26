@@ -10,7 +10,7 @@
 	<div class="container">
 		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
 		<div id="userLogOut">	
-			<b>Hi, USERNAME!</b><br>
+			<b>Hi, <?php echo $result["username"];?>!</b><br>
 			<b><a href="#">logout</a></b>
 		</div>
 		<ul class="navig">
