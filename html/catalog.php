@@ -36,52 +36,36 @@
 				<input type="radio" name="category" value="store"> store<br>
 			</form>
 		</div>
+		<?php if(isset($produks)){
+			foreach ($produks as $produk) {?>
+				<div class="catalog">
+					<b><?php echo $produk['usernamePenjual'];?></b><br>
+					added this on <?php echo $produk['tanggalDiTambah'];?><br>
+					<hr>
+					<table id="produk"  cellpadding="10">
+						<tr>
+							<td id="foto"><img class="fotoProduk" src="<?php echo $produk['gambar'];?>" alt="foto produk"></td>
+							<td id="deskripsi">
+								<font size="5"><b><?php echo $produk['nama'];?></b></font><br><br>
+								<font size="5">IDR <?php echo $produk['price'];?></font><br>
+								<?php echo $produk['description'];?>
+							</td>
+							<td id="data">
+								<?php echo $produk['nLike'];?> likes <br>
+								<?php echo $produk['nSales'];?> purchase<br><br>
+								<a id="likeButton" href="">LIKE</a>
+								<a id="buyButton" href="">BUY</a>
+							</td>
+						</tr>
+					</table>
+					<hr>
+				</div>
+	<?php 	}
+		
 
-	<div class="catalog">
-			<b>store</b><br>
-			added this on Sunday, 14 September 2016, at 12.00<br>
-			<hr>
-			<table id="produk"  cellpadding="10">
-				<tr>
-					<td id="foto"><img class="fotoProduk" src="<?php echo $ServerRoot;?>/aset/batik turquoise.jpg" alt="foto produk"></td>
-					<td id="deskripsi">
-						<font size="5"><b>Batik Turquoise</b></font><br><br>
-						<font size="5">IDR 115.000</font><br>
-						Beautiful batik cloth. Size 1.15m x 2m.
-					</td>
-					<td id="data">
-						7 likes <br>
-						0 purchase<br><br>
-						<a id="likeButton" href="">LIKE</a>
-						<a id="buyButton" href="">BUY</a>
-					</td>
-				</tr>
-			</table>
-			<hr>
-		</div>
 
-		<div class="catalog">
-			<b>store</b><br>
-			added this on Sunday, 14 September 2016, at 12.00<br>
-			<hr>
-			<table id="produk"  cellpadding="10">
-				<tr>
-					<td id="foto"><img class="fotoProduk" src="<?php echo $ServerRoot;?>/aset/batik turquoise.jpg" alt="foto produk"></td>
-					<td id="deskripsi">
-						<font size="5"><b>Batik Turquoise</b></font><br><br>
-						<font size="5">IDR 115.000</font><br>
-						Beautiful batik cloth. Size 1.15m x 2m.
-					</td>
-					<td id="data">
-						7 likes <br>
-						0 purchase<br><br>
-						<a id="likeButton" href="">LIKE</a>
-						<a id="buyButton" href="">BUY</a>
-					</td>
-				</tr>
-			</table>
-			<hr>
-		</div>
+		}?>
+		
 	</div>
 </body>
 </html>

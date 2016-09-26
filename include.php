@@ -6,7 +6,7 @@
 	//app dan fungsi2
 	require "app/routing.php";
 	require "app/authentication.php";
-	
+	require "app/produk.php";
 	//config
 	require "config.php";
 ?>

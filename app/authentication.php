@@ -1,5 +1,4 @@
 <?php
-
 	function authentification(){
 		global $ServerRoot;
 		if (isset($_GET["id_active"])) {
@@ -23,6 +22,11 @@
 		}
 
 		return $result;
+	}
+
+	function logout(){
+		global $ServerRoot;
+		echo $ServerRoot.'/logout.php';
 	}
 	
 ?>

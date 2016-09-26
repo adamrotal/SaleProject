@@ -4,6 +4,7 @@
 	function selectDataFromDB($query){
 		global $servername, $usernameDatabase, $passwordDatabase, $dbname;
 		
+
 		// Create connection
 		$conn = new mysqli($servername, $usernameDatabase, $passwordDatabase, $dbname);
 		
