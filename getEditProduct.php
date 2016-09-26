@@ -1,8 +1,9 @@
 <?php
+	require "config.php";
 	if (!isset($_GET["id_active"])) {
-		$redirectUrl = 'Location: http://'.$_SERVER['HTTP_HOST'].'/getLogin.php';
+		$redirectUrl = 'Location: http://'.$ServerRoot.'/getLogin.php';
 		header($redirectUrl);
 		die();
 	}
-	require $_SERVER["DOCUMENT_ROOT"]."/html/edit_product.php";
+	require $DocumentRoot."/html/edit_product.php";
 ?>

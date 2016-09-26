@@ -1,3 +1,3 @@
 <?php
-	require $_SERVER["DOCUMENT_ROOT"]."/html/login.php";
+	require $DocumentRoot."/html/login.php";
 ?>

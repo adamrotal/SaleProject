@@ -15,14 +15,14 @@
 	$result = selectDataFromDB($query);
 	
 	if($result != null){
-		$redirectUrl = 'Location: http://'.$_SERVER['HTTP_HOST'].'/getRegister.php';
+		$redirectUrl = 'Location: http://'.$ServerRoot.'/getRegister.php';
 		header($redirectUrl);
 		die();
 	}else{
 		$query = "INSERT INTO user(fullName,username,email,password,fullAddress,postalCode,phoneNumber) VALUES('$fullName','$username','$email','$password','$fullAddress','$postalCode','$phoneNumber')";
 
 		$result = insertDataToDB($query);
-		$redirectUrl = 'Location: http://'.$_SERVER['HTTP_HOST'].'/getCatalog.php?id_active='.$result;
+		$redirectUrl = 'Location: http://'.$ServerRoot.'/getCatalog.php?id_active='.$result;
 		header($redirectUrl);
 		die();	
 	}

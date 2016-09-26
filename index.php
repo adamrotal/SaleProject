@@ -1,9 +1,9 @@
 <?php
 	session_start();
 	if(isset($_SESSION["user"])){
-		$redirectUrl = 'Location: http://'.$_SERVER['HTTP_HOST'].'/getCatalog.php';
+		$redirectUrl = 'Location: http://'.$ServerRoot.'/getCatalog.php';
 	}else{
-		$redirectUrl = 'Location: http://'.$_SERVER['HTTP_HOST'].'/getLogin.php'; 
+		$redirectUrl = 'Location: http://'.$ServerRoot.'/getLogin.php'; 
 	}
 	header($redirectUrl);
 	die();
