@@ -54,7 +54,7 @@
 								<?php echo $produk['nLike'];?> likes <br>
 								<?php echo $produk['nSales'];?> purchase<br><br>
 								<a id="likeButton" href="">LIKE</a>
-								<a id="buyButton" href="">BUY</a>
+								<a id="buyButton" href="<?php RoutingBuy($produk['id']);?>">BUY</a>
 							</td>
 						</tr>
 					</table>

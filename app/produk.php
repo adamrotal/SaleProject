@@ -34,6 +34,13 @@
 		return $result;
 	}
 
+	function getSingleProduct($idProduk){
+		$query = "SELECT * FROM produk WHERE id = '$idProduk'";
+		$result = selectDataFromDB($query);
+		$result = $result->fetch_assoc();
+
+		return $result;
+	}
 
 	function getAttributProduk($resultProduk){
 		global $user,$ServerGambar;
