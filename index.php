@@ -1,9 +1,10 @@
 <?php
+	require "config.php";
 	session_start();
 	if(isset($_SESSION["user"])){
-		$redirectUrl = 'Location: http://'.$ServerRoot.'/getCatalog.php';
+		$redirectUrl = 'Location: '.$ServerRoot.'/getCatalog.php';
 	}else{
-		$redirectUrl = 'Location: http://'.$ServerRoot.'/getLogin.php'; 
+		$redirectUrl = 'Location: '.$ServerRoot.'/getLogin.php'; 
 	}
 	header($redirectUrl);
 	die();

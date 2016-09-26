@@ -1,6 +1,7 @@
 <?php
 	require "database/getFromDB.php";
 	require "database/insertToDB.php";
+	require "config.php";
 
 	$fullName = $_POST["fullName"];
 	$username = $_POST["username"];

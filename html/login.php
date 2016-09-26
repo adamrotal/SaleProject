@@ -2,13 +2,13 @@
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="../css/frontPage.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/frontPage.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="container">
-		<center><img class="logo" src="../aset/logoText.png"></center>
+		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
 		<h2>Please Login</h2>
 		<hr>
 		<form action="login.php">
