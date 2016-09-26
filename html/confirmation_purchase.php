@@ -14,11 +14,11 @@
 			<b><a href="#">logout</a></b>
 		</div>
 		<ul class="navig">
-			<li><a href="#">Catalog</a></li>
-			<li><a href="#">Your Product</a></li>
-			<li><a href="#">Add Product</a></li>
-			<li><a href="#">Sales</a></li>
-			<li><a class="active" href="#">Purchases</a></li>
+			<li><a href="getCatalog.php">Catalog</a></li>
+			<li><a href="getProduct.php">Your Product</a></li>
+			<li><a href="getAddProduct.php">Add Product</a></li>
+			<li><a href="getSales.php">Sales</a></li>
+			<li><a class="active" href="getPurshase.php">Purchases</a></li>
 		</ul>
 		<h1>Please confirm your purchase</h1>
 		<hr>
