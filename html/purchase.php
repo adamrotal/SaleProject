@@ -11,7 +11,7 @@
 		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
 		<div id="userLogOut">	
 			<b>Hi, <?php echo $user["username"];?>!</b><br>
-			<b><a href="#">logout</a></b>
+			<b><a href="<?php logout();?>">logout</a></b>
 		</div>
 		
 		<ul class="navig">
