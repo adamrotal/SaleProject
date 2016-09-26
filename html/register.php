@@ -12,9 +12,9 @@
 		<center><img class="logo" src="../aset/logoText.png"></center>
 		<h2>Please Register</h2>
 		<hr>
-		<form action="postRegister.php">
+		<form action="postRegister.php" method="post">
 			<b>Full Name</b><br>
-			<input type="text" name="fullname"><br>
+			<input type="text" name="fullName"><br>
 			<b>Username</b><br>
 			<input type="text" name="username"><br>
 			<b>Email</b><br>
@@ -24,11 +24,11 @@
 			<b>Confirm Password</b><br>
 			<input type="password" name="confirmpassword"><br>
 			<b>Full Address</b><br>
-			<input type="text" name="address"><br>
+			<input type="text" name="fullAddress"><br>
 			<b>Postal Code</b><br>
-			<input type="text" name="postalcode"><br>
+			<input type="text" name="postalCode"><br>
 			<b>Phone Number</b><br>
-			<input type="text" name="phonenumber"><br>
+			<input type="text" name="phoneNumber"><br>
 
 			<br><br>
 			<input type="submit" value="Register">

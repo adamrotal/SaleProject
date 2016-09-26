@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if (!isset($_SESSION["user"])) {
+	if (!isset($_GET["id_active"])) {
 		$redirectUrl = 'Location: http://'.$_SERVER['HTTP_HOST'].'/getLogin.php';
 		header($redirectUrl);
 		die();

@@ -2,10 +2,10 @@
 	require "config.php";
 
 	function selectDataFromDB($query){
-		global $servername, $username, $password, $dbname;
+		global $servername, $usernameDatabase, $passwordDatabase, $dbname;
 	
 		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
+		$conn = new mysqli($servername, $usernameDatabase, $passwordDatabase, $dbname);
 		
 		// Check connection
 		if ($conn->connect_error) {
