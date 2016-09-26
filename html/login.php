@@ -19,7 +19,7 @@
 			<br><br>
 			<input type="submit" value="LOGIN">
 		</form>
-		<p><b>Don't have an account yet? Register <a href="/getRegister.php">here</a></b></p>
+		<p><b>Don't have an account yet? Register <a href="<?php echo $ServerRoot;?>/getRegister.php">here</a></b></p>
 	</div>
 	
 

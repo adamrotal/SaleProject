@@ -2,14 +2,14 @@
 <html>
 <head>
 	<title>Register</title>
-	<link rel="stylesheet" type="text/css" href="../css/frontPage.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/frontPage.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<div class="container">
-		<center><img class="logo" src="../aset/logoText.png"></center>
+		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
 		<h2>Please Register</h2>
 		<hr>
 		<form action="postRegister.php" method="post">
@@ -33,7 +33,7 @@
 			<br><br>
 			<input type="submit" value="Register">
 		</form>
-		<p><b>Already registered? Login <a href="#">here</a></b></p>
+		<p><b>Already registered? Login <a href="<?php echo $ServerRoot;?>/getLogin.php">here</a></b></p>
 	</div>
 	
 

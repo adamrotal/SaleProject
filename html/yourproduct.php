@@ -2,13 +2,13 @@
 <html>
 <head>
 	<title>Your Product</title>
-	<link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/dashboard.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="container">
-		<center><img class="logo" src="../aset/logoText.png"></center>
+		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
 		<div id="userLogOut">	
 			<b>Hi, USERNAME!</b><br>
 			<b><a href="#">logout</a></b>
@@ -30,7 +30,7 @@
 			<hr>
 			<table id="produk"  cellpadding="10">
 				<tr>
-					<td id="foto"><img class="fotoProduk" src="../aset/batik turquoise.jpg" alt="foto produk"></td>
+					<td id="foto"><img class="fotoProduk" src="<?php echo $ServerRoot;?>/aset/batik turquoise.jpg" alt="foto produk"></td>
 					<td id="deskripsi">
 						<font size="5"><b>Batik Turquoise</b></font><br><br>
 						<font size="5">IDR 115.000</font><br>
@@ -53,7 +53,7 @@
 			<hr>
 			<table id="produk"  cellpadding="10">
 				<tr>
-					<td id="foto"><img class="fotoProduk" src="../aset/batik turquoise.jpg" alt="foto produk"></td>
+					<td id="foto"><img class="fotoProduk" src="<?php echo $ServerRoot;?>/aset/batik turquoise.jpg" alt="foto produk"></td>
 					<td id="deskripsi">
 						<font size="5"><b>Batik Turquoise</b></font><br><br>
 						<font size="5">IDR 115.000</font><br>

@@ -2,13 +2,13 @@
 <html>
 <head>
 	<title>Edit Product</title>
-	<link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/dashboard.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="container">
-		<center><img class="logo" src="../aset/logoText.png"></center>
+		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
 		<div id="userLogOut">	
 			<b>Hi, USERNAME!</b><br>
 			<b><a href="#">logout</a></b>
