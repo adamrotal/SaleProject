@@ -5,12 +5,33 @@
 		
 		$resultProduk = selectDataFromDB($query);
 		
+		if($resultProduk!=null){
+			$result = getAttributProduk($resultProduk);	
+		}else{
+			$result = null;
+		}
 		
-		$result = getAttributProduk($resultProduk);
 
 		return $result;
 		
 		
+	}
+
+	function yourProduk(){
+		global $user;
+		$idUser = $user['id'];
+		$query = "SELECT * FROM produk WHERE idPenjual='$idUser'";
+		
+		$resultProduk = selectDataFromDB($query);
+		
+		
+		if($resultProduk!=null){
+			$result = getAttributProduk($resultProduk);	
+		}else{
+			$result = null;
+		}
+
+		return $result;
 	}
 
 
