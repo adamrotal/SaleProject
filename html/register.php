@@ -12,7 +12,7 @@
 		<center><img class="logo" src="../aset/logoText.png"></center>
 		<h2>Please Register</h2>
 		<hr>
-		<form action="action_page.php">
+		<form action="postRegister.php">
 			<b>Full Name</b><br>
 			<input type="text" name="fullname"><br>
 			<b>Username</b><br>

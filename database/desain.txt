@@ -1,0 +1,35 @@
+user
+- int id
+- varchar fullName
+- varchar username (unique)
+- varchar email
+- varchar password
+- text fullAddress
+- varchar postalCode
+- varchar phoneNumber
+
+produk
+- int id
+- int idPenjual
+- varchar name
+- text description
+- int price
+- varchar gambar
+- date tanggalDiTambah
+
+like
+- int id
+- int idUser
+- int idProduk
+
+penjualan
+- int id
+- int idProduk
+- int idPembeli
+- varchar namaPembeli
+- text fullAddress
+- varchar postalCode
+- int phoneNumber
+- varchar creditCard
+- varchar codeVerification
+- date tanggalDiBeli

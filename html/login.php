@@ -11,7 +11,7 @@
 		<center><img class="logo" src="../aset/logoText.png"></center>
 		<h2>Please Login</h2>
 		<hr>
-		<form action="action_page.php">
+		<form action="login.php">
 			<b>Email or Username</b><br>
 			<input type="text" name="email"><br>
 			<b>Password</b><br>
