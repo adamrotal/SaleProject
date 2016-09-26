@@ -1,8 +1,7 @@
 <?php
 	
 	$servername = "localhost";
-	$usernameDatabase = "kuliah";
-	$passwordDatabase = "kuliah";
-	$dbname = "onlineShop";
-
+	$usernameDatabase = "admin_manasik";
+	$passwordDatabase = "admin_manasik";
+	$dbname = "onlineshop";
 ?>
