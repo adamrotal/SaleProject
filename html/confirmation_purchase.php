@@ -26,7 +26,7 @@
 			<div class="remainder">	
 				<span class="product">Product</span>  : Sembarang<br> 
 				<span class="price">Price</span> : IDR <?php echo $produk['price'];?><br>
-				<span class="qual">Quantity</span> : <input id="quality" value="1"> PCS<br>
+				<span class="qual">Quantity</span> : <input id="quality" value="1" name="kuantitas"> PCS<br>
 				<span class="totalprice">Total Price</span> : xxxxxxxxxxxxxx<br>
 				<span class="del">Delivery To</span> : <br>
 			</div>
@@ -50,8 +50,8 @@
 				<br>
 				<input type="hidden" name="idPembeli" value="<?php echo $user['id'];?>">
 				<input type="hidden" name="idProduk" value="<?php echo $produk['id'];?>">
-				<button type="submit" value="CANCEL">CANCEL</button>
-				<button type="submit" value="CONFIRM">CONFIRM</button>
+				<button type="submit" value="CANCEL" name="action">CANCEL</button>
+				<button type="submit" value="CONFIRM" name="action">CONFIRM</button>
 			
 			</div>
 		</form>

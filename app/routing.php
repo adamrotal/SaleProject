@@ -10,4 +10,11 @@
 		global $ServerRoot,$user;
 		echo $ServerRoot.'/getConfirmPurchase.php?id_active='.$user['id'].'&id_produk='.$idProduk;	
 	}
+
+	function Redirect($idUser,$url){
+		global $ServerRoot;
+		$redirectUrl = 'Location: '.$ServerRoot.'/'.$url.'?id_active='.$idUser;
+		header($redirectUrl);
+		die();
+	}
 ?>
