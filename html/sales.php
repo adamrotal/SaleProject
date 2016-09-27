@@ -23,58 +23,37 @@
 		<h1>Here are your sales</h1>
 		<hr>
 		
+		<?php if(isset($produks)){
+			foreach ($produks as $produk) {?>
+				<div class="sales">
+					<b>Sunday, <?php echo $produk['tanggal'];?></b><br>
+					at 12.00<br>
+					<hr>
+					<table id="produk"  cellpadding="10">
+						<tr>
+							<td id="foto"><img class="fotoProduk" src="<?php echo $produk['gambar'];?>" alt="foto produk"></td>
+							<td id="deskripsi">
+								<font size="5"><b><?php echo $produk['nameProduk'];?></b></font><br><br>
+								<font size="5">IDR <?php echo $produk['totalPrice'];?></font><br>
+								<?php echo $produk['kuantitas'];?> pcs<br>
+								@IDR <?php echo $produk['price'];?><br><br>
+								bought by <b><?php echo $produk['username'];?></b>
+							</td>
+							<td id="dataPurchase">
+								Delivery to <b><?php echo $produk['namaPembeli'];?></b><br>
+								<?php echo $produk['fullAddress'];?><br>
+								<?php echo $produk['postalCode'];?><br>
+								<?php echo $produk['phoneNumber'];?><br>
+							</td>
+						</tr>
+					</table>
+					<hr>
+				</div>
+	<?php 	}
 
-		<div class="sales">
-			<b>Sunday, 14 September 2016</b><br>
-			at 12.00<br>
-			<hr>
-			<table id="produk"  cellpadding="10">
-				<tr>
-					<td id="foto"><img class="fotoProduk" src="<?php echo $ServerRoot;?>/aset/batik turquoise.jpg" alt="foto produk"></td>
-					<td id="deskripsi">
-						<font size="5"><b>Batik Turquoise</b></font><br><br>
-						<font size="5">IDR 1.000.000</font><br>
-						2 pcs<br>
-						@IDR 500.000<br><br>
-						bought by <b>usernameBUYER</b>
-					</td>
-					<td id="dataSales">
-						Delivery to <b>namaBuyer(?)</b><br>
-						Jl Cibening barat no 20.<br>
-						Bandung<br>
-						40280<br>
-						085815072108<br>
-					</td>
-				</tr>
-			</table>
-			<hr>
-		</div>
+		}?>
 
-		<div class="sales">
-			<b>Sunday, 14 September 2016</b><br>
-			at 12.00<br>
-			<hr>
-			<table id="produk"  cellpadding="10">
-				<tr>
-					<td id="foto"><img class="fotoProduk" src="../aset/batik turquoise.jpg" alt="foto produk"></td>
-					<td id="deskripsi">
-						<font size="5"><b>Batik Turquoise</b></font><br><br>
-						<font size="5">IDR 1.000.000</font><br>
-						2 pcs<br>
-						@IDR 500.000<br><br>
-						bought by <b>usernameBUYER</b>
-					</td>
-					<td id="dataSales">
-						Delivery to <b>namaBuyer(?)</b><br>
-						Jl Cibening barat no 20.<br>
-						Bandung<br>
-						40280<br>
-						085815072108<br>
-					</td>
-				</tr>
-			</table>
-			<hr>
-		</div>
+		
 	</div>
 </body>
 </html>
