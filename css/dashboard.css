@@ -75,7 +75,12 @@ ul.navig li a.active {
 }
 
 .qual{
-	margin-right: 45px
+	margin-right: 35px
+}
+
+#quality {
+	text-align: right;
+	width: 30px;
 }
 
 .totalprice{
@@ -138,7 +143,7 @@ input[type="button"]{
 }
 
 .searchbox {
-	margin-top: 20px;
+	margin-top: 50px;
 	overflow: auto;
 }
 
@@ -168,7 +173,7 @@ input[type="button"]{
 	padding-left: 10px;
 }
 
-.catalog, .sales, .purchases {
+.catalog, .sales, .purchases, .detailProduct {
 	margin-top: 50px;
 	margin-bottom: 20px;
 }
@@ -183,19 +188,26 @@ input[type="button"]{
 }
 
 #foto {
-	width: 30%;
+	width: 20%;
 	vertical-align: middle;
 	text-align: center;
 }
 
 #deskripsi {
 	width: 50%;
+	padding-right: 50px;
 	text-align: justify;
 }
 
 #data {
-	text-align: center;
+	text-align: left;
 	width: 20%;
+}
+
+#dataPurchase, #dataSales {
+	text-align: left;
+	width: 40%;
+	vertical-align: top;
 }
 
 #likeButton {
@@ -231,24 +243,27 @@ input[type="button"]{
 }
 
 
-input#name, input#price {
+input#name, input#price, input#consignee, input#address,
+input#postal, input#phone, input#credit, input#verification {
 	width: 99%;
 	height: 30px;
 	padding-left: 10px;
-	font-size: 25px;
+	font-size: 18px;
 	margin-bottom: 30px;
 	margin-top: 5px;
+	background-color: white;
+	border: solid black 1px;
 }
 
-textarea#description {
+textarea#description, textarea#address {
 	width: 99%;
 	height: 90px;
 	padding-left: 10px;
-	margin-bottom: 10px;
 	margin-top: 5px;
 	font: inherit;
 	font-weight: bold;
 	margin-bottom: 30px;
+	border: solid black 1px;
 }
 
 button[type="submit"], button[type="cancel"]{
@@ -264,4 +279,33 @@ button[type="submit"], button[type="cancel"]{
 
 button[type="submit"]:hover, button[type="cancel"]:hover{
 	background-color: #660066;
+}
+
+#editButton {
+	color: #e8a31b;
+	border-radius: 0px;
+	height: 40px;
+	width: 55px;
+	border: 0px;
+	border-radius: 0px;
+	font-weight: bold;
+	margin-right: 10px;
+	background-color: transparent;
+}
+
+#deleteButton {
+	border-radius: 0px;
+	height: 40px;
+	width: 55px;
+	border: 0px;
+	border-radius: 0px;
+	font-weight: bold;
+	margin-right: 10px;
+	background-color: transparent;
+	color: #ce0e08;
+}
+
+.remainder {
+	margin-top: 30px;
+	margin-bottom: 20px;
 }

@@ -38,7 +38,7 @@
 						@IDR 500.000<br><br>
 						bought by <b>usernameBUYER</b>
 					</td>
-					<td id="data">
+					<td id="dataSales">
 						Delivery to <b>namaBuyer(?)</b><br>
 						Jl Cibening barat no 20.<br>
 						Bandung<br>
@@ -64,7 +64,7 @@
 						@IDR 500.000<br><br>
 						bought by <b>usernameBUYER</b>
 					</td>
-					<td id="data">
+					<td id="dataSales">
 						Delivery to <b>namaBuyer(?)</b><br>
 						Jl Cibening barat no 20.<br>
 						Bandung<br>

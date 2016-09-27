@@ -24,7 +24,7 @@
 			<b>Confirm Password</b><br>
 			<input type="password" name="confirmpassword"><br>
 			<b>Full Address</b><br>
-			<input type="text" name="fullAddress"><br>
+			<textarea name="fullAddress"></textarea><br>
 			<b>Postal Code</b><br>
 			<input type="text" name="postalCode"><br>
 			<b>Phone Number</b><br>

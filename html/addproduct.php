@@ -26,7 +26,7 @@
 	<div class="detailProduct">
 		<form action="action_page.php">
 			<b>Name</b><br>
-			<input id="name" type="text" name="name"></textarea>
+			<input id="name" type="text" name="name">
 			<b>Description (max 200 chars)</b><br>
 			<textarea id="description" name="description"></textarea>
 			<b>Price (IDR)</b><br>

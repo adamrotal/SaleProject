@@ -40,8 +40,8 @@
 							<td id="data">
 								<?php echo $produk['nLike'];?> likes <br>
 								<?php echo $produk['nSales'];?> purchase<br><br>
-								<a id="editButton" href="#">EDIT</a>
-								<a id="deleteButton" href="#">DELETE</a>
+								<a id="editButton" href="#"><b>EDIT<b></a>
+								<a id="deleteButton" href="#"><b>DELETE<b></a>
 							</td>
 						</tr>
 					</table>

@@ -26,7 +26,7 @@
 			<div class="remainder">	
 				<span class="product">Product</span>  : Sembarang<br> 
 				<span class="price">Price</span> : IDR <?php echo $produk['price'];?><br>
-				<span class="qual">Quantity</span> : <input type="qual" id="quality" value="1"> PCS<br>
+				<span class="qual">Quantity</span> : <input id="quality" value="1"> PCS<br>
 				<span class="totalprice">Total Price</span> : xxxxxxxxxxxxxx<br>
 				<span class="del">Delivery To</span> : <br>
 			</div>
@@ -37,7 +37,7 @@
 				Consignee<br>
 				<input id="consignee" type="text" name="namaPembeli" value="<?php echo $user['fullName'];?>"><br>
 				<br>Full Address<br>
-				<input id="address" type="longtext" name="fullAddress" value="<?php echo $user['fullAddress'];?>"><br>
+				<textarea id="address" name="fullAddress"><?php echo $user['fullAddress'];?></textarea>
 				<br>Postal Code<br>
 				<input id="postal" type="text" name="postalCode" value="<?php echo $user['postalCode'];?>"><br>
 				<br>Phone Number<br>
@@ -50,6 +50,7 @@
 				<br>
 				<input type="hidden" name="idPembeli" value="<?php echo $user['id'];?>">
 				<input type="hidden" name="idProduk" value="<?php echo $produk['id'];?>">
+				<button type="submit" value="CANCEL">CANCEL</button>
 				<button type="submit" value="CONFIRM">CONFIRM</button>
 			
 			</div>
