@@ -42,6 +42,13 @@
 		return $result;
 	}
 
+	function getProdukPurchase(){
+		global $user;
+		$idUser = $user['id'];
+
+		$query = "SELECT * FROM sales WHERE idPembeli = '$idUser'";
+	}
+
 	function getAttributProduk($resultProduk){
 		global $user,$ServerGambar;
 		$idUser = $user['id'];

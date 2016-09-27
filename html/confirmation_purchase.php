@@ -50,6 +50,7 @@
 				<br>
 				<input type="hidden" name="idPembeli" value="<?php echo $user['id'];?>">
 				<input type="hidden" name="idProduk" value="<?php echo $produk['id'];?>">
+				<input type="hidden" name="idPenjual" value="<?php echo $produk['idPenjual'];?>">
 				<button type="submit" value="CANCEL" name="action">CANCEL</button>
 				<button type="submit" value="CONFIRM" name="action">CONFIRM</button>
 			

@@ -14,8 +14,9 @@
 	$creditCard = $_POST['creditCard'];
 	$codeVerification = $_POST['codeVerification'];
 	$kuantitas = $_POST['kuantitas'];
+	$idPenjual = $_POST['idPenjual'];
 
-	$query = "INSERT INTO sales(idProduk,idPembeli,namaPembeli,fullAddress,postalCode,phoneNumber,creditCard,codeVerification,kuantitas,tanggalDiBeli) VALUES('$idProduk','$idPembeli','$namaPembeli','$fullAddress','$postalCode','$phoneNumber','$creditCard','$codeVerification','$kuantitas',CURDATE())";
+	$query = "INSERT INTO sales(idProduk,idPembeli,namaPembeli,fullAddress,postalCode,phoneNumber,creditCard,codeVerification,kuantitas,tanggalDiBeli,idPenjual) VALUES('$idProduk','$idPembeli','$namaPembeli','$fullAddress','$postalCode','$phoneNumber','$creditCard','$codeVerification','$kuantitas',CURDATE(),'$idPenjual')";
 	$idSales = insertDataToDB($query);
 	
 	Redirect($_POST['idPembeli'],'getPurchase.php');
