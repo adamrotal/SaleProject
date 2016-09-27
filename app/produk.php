@@ -43,10 +43,63 @@
 	}
 
 	function getProdukPurchase(){
-		global $user;
+		global $user,$ServerGambar;
 		$idUser = $user['id'];
+		$result = array();
 
 		$query = "SELECT * FROM sales WHERE idPembeli = '$idUser'";
+		$resultProduk = selectDataFromDB($query);
+
+		if($resultProduk != null){
+			while($row = $resultProduk->fetch_assoc()){
+
+				$idProduk = $row['idProduk'];
+				$idPenjual = $row['idPenjual'];
+				
+				$query = "SELECT * FROM produk WHERE id = '$idProduk'";
+				$tempProduk = selectDataFromDB($query);
+				$tempProduk = $tempProduk->fetch_assoc();
+
+				$query = "SELECT * FROM user WHERE id = '$idPenjual'";
+				$penjual = selectDataFromDB($query);
+				$penjual = $penjual->fetch_assoc();
+
+
+				$tanggal = $row['tanggalDiBeli'];
+				$gambar = $ServerGambar.$tempProduk['gambar'];
+				$nameProduk = $tempProduk['name'];
+				$totalPrice = $row['kuantitas'] * $tempProduk['price'];
+				$kuantitas = $row['kuantitas'];
+				$price = $tempProduk['price'];
+				$username = $penjual['username'];
+				$namaPembeli = $row['namaPembeli'];
+				$fullAddress = $row['fullAddress'];
+				$postalCode = $row['postalCode'];
+				$phoneNumber = $row['phoneNumber'];
+
+				$produk = array(
+					'tanggal' => $tanggal,
+					'gambar' => $gambar,
+					'nameProduk' => $nameProduk,
+					'totalPrice' => $totalPrice, 
+					'kuantitas' => $kuantitas,
+					'price' => $price,
+					'username' => $username,
+					'namaPembeli' => $namaPembeli,
+					'fullAddress' => $fullAddress,
+					'postalCode' => $postalCode,
+					'phoneNumber'=>  $phoneNumber,
+				);
+
+
+				array_push($result, $produk);
+			}	
+		}else{
+			$result = null;
+		}
+		
+		return $result;
+
 	}
 
 	function getAttributProduk($resultProduk){

@@ -5,7 +5,7 @@
 
 	$user = authentification();
 
-	$produk = getProdukPurchase();
+	$produks = getProdukPurchase();
 	
 	require $DocumentRoot."/html/purchase.php";
 
