@@ -89,7 +89,7 @@ CREATE TABLE `sales` (
   `kuantitas` int(11) DEFAULT NULL,
   `idPenjual` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +98,7 @@ CREATE TABLE `sales` (
 
 LOCK TABLES `sales` WRITE;
 /*!40000 ALTER TABLE `sales` DISABLE KEYS */;
-INSERT INTO `sales` VALUES (1,1,1,'Ahmad Fajar Prasetiyo','Jl. Argowayang no 31 Pare Kediri Jawa Timur','43211','085312843102','123456789021','123','2016-09-27',1,4);
+INSERT INTO `sales` VALUES (1,1,1,'Ahmad Fajar Prasetiyo','Jl. Argowayang no 31 Pare Kediri Jawa Timur','43211','085312843102','123456789021','123','2016-09-27',1,4),(2,4,1,'Ahmad Fajar Prasetiyo','Jl. Argowayang no 31 Pare Kediri Jawa Timur','43211','085312843102','123456789021','123','2016-09-27',2,4);
 /*!40000 ALTER TABLE `sales` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,4 +142,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-27 17:05:20
+-- Dump completed on 2016-09-27 21:48:15
