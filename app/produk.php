@@ -58,10 +58,10 @@
 			$query = "SELECT * FROM liked WHERE idProduk = '$idProduk' AND idUser = '$idUser'";
 			$resultLiked = selectDataFromDB($query);
 
-			$query = "SELECT * FROM sales WHERE idProduk = '$idProduk";
+			$query = "SELECT * FROM sales WHERE idProduk = '$idProduk'";
 			$resultNSales = selectDataFromDB($query);
 
-			$query = "SELECT * FROM user WHERE id = $idPenjual";
+			$query = "SELECT * FROM user WHERE id = '$idPenjual'";
 			$resultPenjual = selectDataFromDB($query);
 			
 			if($resultNLiked == null){
