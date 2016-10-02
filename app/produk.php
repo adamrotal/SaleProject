@@ -17,6 +17,30 @@
 		
 	}
 
+	function getCatalogSearch(){
+		$keyword = $_GET['keyword'];
+		if($_GET['category'] == "product"){
+			$query = "SELECT * FROM produk WHERE name LIKE '%$keyword%'";	
+		}else{
+			$_GET['category'] = "store";
+			$query = "SELECT * FROM produk WHERE namaPenjual LIKE '%$keyword%'";			
+		}
+		
+		
+		
+
+		$resultProduk = selectDataFromDB($query);
+		
+		if($resultProduk!=null){
+			$result = getAttributProduk($resultProduk);	
+		}else{
+			$result = null;
+		}
+
+		
+		return $result;
+	}
+
 	function yourProduk(){
 		global $user;
 		$idUser = $user['id'];

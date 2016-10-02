@@ -5,11 +5,11 @@
 	$user = authentification();
 	
 	if(isset($_GET['keyword'])){
-
+		$produks = getCatalogSearch();
 	}else{
-		
+		$produks = catalogDefault();	
 	}
-	$produks = catalogDefault();
+	
 
 	
 
