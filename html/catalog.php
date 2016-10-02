@@ -22,20 +22,19 @@
 		</ul>
 		<h1>What are you going to buy today?</h1>
 		<hr>
-		<div class="searchbox">	
-			<form>
-	        	<input type="text" placeholder="Search catalog..." required>
-	            <input id="searching" type="button" value="GO">
-			</form>
-		</div>
-
-		<div class="byRadio"">
-			<div id="by">by</div>
-			<form id="radioButton" action="">
-				<input type="radio" name="category" value="product"> product<br>
-				<input type="radio" name="category" value="store"> store<br>
-			</form>
-		</div>
+		<form action="getCatalog.php" method="get">
+			<div class="searchbox">	
+		        	<input type="text" placeholder="Search catalog..." name="keyword" value= "<?php issetEcho($_GET['keyword']);?>" required>
+		            <input id="searching" type="submit" value="GO">
+			</div>
+			<div class="byRadio"">
+				<div id="by">by</div><br>
+					<input type="radio" name="category" value="product" <?php ifValueChecked("product",$_GET['category']);?> > product<br>
+					<input type="radio" name="category" value="store" <?php ifValueChecked("store",$_GET['category']);?> > store<br>
+					<input type="hidden" name="id_active" value="<?php echo $user['id'];?>">
+			</div>	
+		</form>
+		
 		<?php if(isset($produks)){
 			foreach ($produks as $produk) {?>
 				<div class="catalog">
