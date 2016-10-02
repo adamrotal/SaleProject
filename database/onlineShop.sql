@@ -54,6 +54,7 @@ CREATE TABLE `produk` (
   `price` int(11) DEFAULT NULL,
   `gambar` varchar(100) DEFAULT NULL,
   `tanggalDiTambah` date DEFAULT NULL,
+  `namaPenjual` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -64,7 +65,7 @@ CREATE TABLE `produk` (
 
 LOCK TABLES `produk` WRITE;
 /*!40000 ALTER TABLE `produk` DISABLE KEYS */;
-INSERT INTO `produk` VALUES (1,4,'Macbook Pro Retina Display','Dijual macbook pro retina display 2015.\r\n\r\nSpec :\r\nIntel core i5\r\nRAM 8GB\r\n256 SSD\r\nCC 6\r\n\r\nFull set!',15000000,'macbook_pro.jpg','2016-09-26'),(3,4,'Iphone 5s Gold 32GB','Jual Iphone 5s warna Gold pemakaian 1 tahun\r\n\r\nSpec :\r\nRAM 1GB\r\nMemori 32GB\r\nwarna Gold\r\nno lecet, mulus.\r\nspek lengkap cek gsmarena gan\r\n\r\nfull set.',3500000,'iphone_5s.jpg','2016-09-26'),(4,4,'Batik Turoquoise full set','jual batik handmade turquoise.\r\n\r\nSize bisa menyesuaikan badan anda. jahitan mulus. ',300000,'batik_turquoise.jpg','2016-09-26');
+INSERT INTO `produk` VALUES (1,4,'Macbook Pro Retina Display','Dijual macbook pro retina display 2015.\r\n\r\nSpec :\r\nIntel core i5\r\nRAM 8GB\r\n256 SSD\r\nCC 6\r\n\r\nFull set!',15000000,'macbook_pro.jpg','2016-09-26','deapamungkas'),(3,4,'Iphone 5s Gold 32GB','Jual Iphone 5s warna Gold pemakaian 1 tahun\r\n\r\nSpec :\r\nRAM 1GB\r\nMemori 32GB\r\nwarna Gold\r\nno lecet, mulus.\r\nspek lengkap cek gsmarena gan\r\n\r\nfull set.',3500000,'iphone_5s.jpg','2016-09-26','deapamungkas'),(4,4,'Batik Turoquoise full set','jual batik handmade turquoise.\r\n\r\nSize bisa menyesuaikan badan anda. jahitan mulus. ',300000,'batik_turquoise.jpg','2016-09-26','deapamungkas');
 /*!40000 ALTER TABLE `produk` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-27 21:48:15
+-- Dump completed on 2016-10-02 17:32:05
