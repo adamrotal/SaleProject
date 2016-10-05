@@ -24,7 +24,7 @@
 		<hr>
 		
 	<div class="detailProduct">
-		<form action="action_page.php">
+		<form action="upload.php" method="post" enctype="multipart/form-data">
 			<b>Name</b><br>
 			<input id="name" type="text" name="name">
 			<b>Description (max 200 chars)</b><br>
@@ -38,8 +38,6 @@
 			<button type="submit" value="submit">ADD</button>
 		</form>
 	</div>
-
-		
 	</div>
 </body>
 </html>
