@@ -81,7 +81,7 @@ function validationDataDigit(event) {
   	}
 }
 
-function validationLogin(event) {
+function validationLoginButton(event) {
 	event.preventDefault();
 	var emailUsername = document.loginForm.email;
 	var pass = document.loginForm.password;
@@ -95,29 +95,40 @@ function validationLogin(event) {
 		var tooltip = document.getElementById('requiredLoginPassword');
 		tooltip.className += " visibleTooltip";
 	}
+
+	if (emailUsername.value != "" && pass.value != "") {
+		document.getElementById("myFormLogin").submit();
+	}
 }
 
-function loginValid() {
+function validationRegisterButton(event) {
+	event.preventDefault();
 	var emailUsername = document.loginForm.email;
 	var pass = document.loginForm.password;
 	
 	if (emailUsername.value == "") {
 		var tooltip = document.getElementById('requiredLoginEmail');
 		tooltip.className += " visibleTooltip";
-	} else {
-		var tooltip = document.getElementById('requiredLoginEmail');
-		tooltip.className = "tooltip";
 	}
 
 	if (pass.value == "") {
 		var tooltip = document.getElementById('requiredLoginPassword');
 		tooltip.className += " visibleTooltip";
-	} else {
-		var tooltip = document.getElementById('requiredLoginPassword');
-		tooltip.className = "tooltip";
 	}
 
 	if (emailUsername.value != "" && pass.value != "") {
 		document.getElementById("myFormLogin").submit();
+	}	
+}
+
+function loginInputValid(name, tooltipID) {
+	var emailUsername = document.getElementsByName(name);
+
+	if (emailUsername.value == "") {
+		var tooltip = document.getElementById(tooltipID);
+		tooltip.className += " visibleTooltip";
+	} else {
+		var tooltip = document.getElementById(tooltipID);
+		tooltip.className = "tooltip";
 	}
 }

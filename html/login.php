@@ -15,17 +15,17 @@
 		<form id="myFormLogin" action="postLogin.php" method="post" name="loginForm">
 			<b>Email or Username</b><br>
 			<div class="validationInput">	
-				<input class="formValidation" type="text" name="email" onchange="loginValid()">
+				<input class="formValidation" type="text" name="email" oninput="loginInputValid('email', 'requiredLoginEmail')">
 				<span id="requiredLoginEmail" class="tooltip">Required</span>
 			</div>
 			<br>
 			<b>Password</b><br>
 			<div class="validationInput">
-				<input class="formValidation" type="password" name="password" onchange="loginValid()">
+				<input class="formValidation" type="password" name="password" oninput="loginInputValid('password', 'requiredLoginPassword')">
 				<span id="requiredLoginPassword" class="tooltip pass">Required</span>
 			</div>
 			<br><br>
-			<input type="submit" value="LOGIN" onclick="validationLogin(event)">
+			<input type="submit" value="LOGIN" onclick="validationLoginButton(event)">
 		</form>
 		<p><b>Don't have an account yet? Register <a href="<?php echo $ServerRoot;?>/getRegister.php">here</a></b></p>
 	</div>

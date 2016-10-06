@@ -46,13 +46,13 @@
 				<input id="phone" type="text" name="phoneNumber" value="<?php echo $user['phoneNumber'];?>" required><br>
 				<br>12 Digits Credit Card Number<br>
 				<div class="validationInput">
-					<input id="credit" type="text" name="creditCard" onchange="validationCreditCard()">
+					<input id="credit" type="text" name="creditCard" oninput="validationCreditCard()">
 					<span id="creditCardTooltip" class="tooltip">Must be consist of 12 digits number</span>
 				</div>
 				<br>
 				<br>3 Digit Card Verification Value<br>
 				<div class="validationInput">
-					<input id="verification" type="text" name="codeVerification" onchange="validationVerification()">
+					<input id="verification" type="text" name="codeVerification" oninput="validationVerification()">
 					<span id="digitCardTooltip" class="tooltip">Must be consist of 3 digits number</span>
 				</div>
 				<br><br>
