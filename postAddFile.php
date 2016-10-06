@@ -52,7 +52,7 @@ if ($uploadOk == 0) {
         $gambar = $_FILES["fileToUpload"]["name"];
         $namaPenjual = $user['username'];
 
-        $query = "INSERT INTO produk (idPenjual,name,description,price,gambar,tanggalDiTambah,namaPenjual) VALUES($idPenjual,$name,$description,$price,$gambar,CURDATE(),$namaPenjual);";
+        $query = "INSERT INTO produk (idPenjual,name,description,price,gambar,tanggalDiTambah,namaPenjual) VALUES($idPenjual,$name,$description,$price,$gambar,CURDATE(),$namaPenjual)";
         $idUpload = insertDataToDB($query);
 
         Redirect($user['id'],getYourProduct.php);
