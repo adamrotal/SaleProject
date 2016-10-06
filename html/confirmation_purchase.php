@@ -23,7 +23,7 @@
 		</ul>
 		<h1>Please confirm your purchase</h1>
 		<hr>
-		<form id="myForm" action="postConfirmationPurchase.php" method="post">
+		<form id="myFormConfirmation_Purchase" action="postConfirmationPurchase.php" method="post">
 			<div class="remainder">	
 				<span class="product">Product</span>  : Sembarang<br>
 				<input id="initialPrice" type="hidden" name="initPrice" value="<?php echo $produk['price'];?>"> 

@@ -20,7 +20,7 @@ function validationPurchase(event) {
 	}
 
 	spanYes.onclick = function() {
-		document.getElementById("myForm").submit();
+		document.getElementById("myFormConfirmation_Purchase").submit();
 	}
 
 	// When the user clicks anywhere outside of the modal, close it
@@ -79,4 +79,45 @@ function validationDataDigit(event) {
   		validationCreditCard();
   		validationVerification();
   	}
+}
+
+function validationLogin(event) {
+	event.preventDefault();
+	var emailUsername = document.loginForm.email;
+	var pass = document.loginForm.password;
+	
+	if (emailUsername.value == "") {
+		var tooltip = document.getElementById('requiredLoginEmail');
+		tooltip.className += " visibleTooltip";
+	}
+
+	if (pass.value == "") {
+		var tooltip = document.getElementById('requiredLoginPassword');
+		tooltip.className += " visibleTooltip";
+	}
+}
+
+function loginValid() {
+	var emailUsername = document.loginForm.email;
+	var pass = document.loginForm.password;
+	
+	if (emailUsername.value == "") {
+		var tooltip = document.getElementById('requiredLoginEmail');
+		tooltip.className += " visibleTooltip";
+	} else {
+		var tooltip = document.getElementById('requiredLoginEmail');
+		tooltip.className = "tooltip";
+	}
+
+	if (pass.value == "") {
+		var tooltip = document.getElementById('requiredLoginPassword');
+		tooltip.className += " visibleTooltip";
+	} else {
+		var tooltip = document.getElementById('requiredLoginPassword');
+		tooltip.className = "tooltip";
+	}
+
+	if (emailUsername.value != "" && pass.value != "") {
+		document.getElementById("myFormLogin").submit();
+	}
 }

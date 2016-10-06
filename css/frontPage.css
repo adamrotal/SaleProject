@@ -65,3 +65,36 @@ hr{
 	margin-bottom: 50px;
 }
 
+
+.tooltip {
+	visibility: hidden;
+    width: 50px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 5px 3px 5px;
+    font-size: 12px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -19px;
+    left: 23%;
+}
+
+.pass {
+	left: 13% !important;
+}
+
+.validateInputElemen{
+	border : red solid 1px !important;
+}
+
+.visibleTooltip{
+	visibility: visible !important;
+}
+
+.validationInput {
+	position: relative;
+}
