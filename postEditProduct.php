@@ -49,10 +49,23 @@ if ($uploadOk == 0) {
         $name = $_POST['name'];
         $description = $_POST['description'];
         $price = $_POST['price'];
-        $gambar = $_FILES["fileToUpload"]["name"];
         $namaPenjual = $user['username'];
 
-        $query = "INSERT INTO produk (idPenjual,name,description,price,gambar,tanggalDiTambah,namaPenjual) VALUES($idPenjual,$name,$description,$price,$gambar,CURDATE(),$namaPenjual);";
+        if(isset($_POST['photo']))
+        {
+            $gambar = $_FILES["fileToUpload"]["name"];
+            $query = "INSERT INTO produk (idPenjual,name,description,price,gambar,tanggalDiTambah,namaPenjual) VALUES($idPenjual,$name,$description,$price,$gambar,CURDATE(),$namaPenjual)";
+            $idUpload = insertDataToDB($query);
+        }
+        else
+        {
+            $query = "INSERT INTO produk (idPenjual,name,description,price,tanggalDiTambah,namaPenjual) VALUES($idPenjual,$name,$description,$price,CURDATE(),$namaPenjual)";
+
+        }
+
+        
+
+        
         $idUpload = insertDataToDB($query);
 
         Redirect($user['id'],getYourProduct.php);
