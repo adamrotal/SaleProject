@@ -24,7 +24,7 @@
 		<hr>
 		
 	<div class="detailProduct">
-		<form action="upload.php" method="post" enctype="multipart/form-data">
+		<form action="postAddFile.php" method="post" enctype="multipart/form-data">
 			<b>Name</b><br>
 			<input id="name" type="text" name="name">
 			<b>Description (max 200 chars)</b><br>
@@ -33,7 +33,7 @@
 			<input id="price" type="text" name="price">
 			<b>Photo</b><br>
 			<input type="file" name="photo"><br><br>
-			
+			<input type="hidden" value="<php echo $user['id']?>" name="id_active">
 			<button type="cancel" onclick="#">CANCEL</button>
 			<button type="submit" value="submit">ADD</button>
 		</form>
