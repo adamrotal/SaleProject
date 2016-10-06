@@ -14,21 +14,21 @@
 		<hr>
 		<form action="postRegister.php" method="post">
 			<b>Full Name</b><br>
-			<input type="text" name="fullName"><br>
+			<input class="formValidation" type="text" name="fullName"><br>
 			<b>Username</b><br>
-			<input type="text" name="username"><br>
+			<input class="formValidation" type="text" name="username"><br>
 			<b>Email</b><br>
 			<input type="text" name="email"><br>
 			<b>Password</b><br>
-			<input type="password" name="password"><br>
+			<input class="formValidation" type="password" name="password"><br>
 			<b>Confirm Password</b><br>
-			<input type="password" name="confirmpassword"><br>
+			<input class="formValidation" type="password" name="confirmpassword"><br>
 			<b>Full Address</b><br>
-			<textarea name="fullAddress"></textarea><br>
+			<textarea class="formValidation" name="fullAddress"></textarea><br>
 			<b>Postal Code</b><br>
-			<input type="text" name="postalCode"><br>
+			<input class="formValidation" type="text" name="postalCode"><br>
 			<b>Phone Number</b><br>
-			<input type="text" name="phoneNumber"><br>
+			<input class="formValidation" type="text" name="phoneNumber"><br>
 
 			<br><br>
 			<input type="submit" value="Register">

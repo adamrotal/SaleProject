@@ -78,7 +78,7 @@ ul.navig li a.active {
 	margin-right: 35px
 }
 
-#quality {
+#quantity {
 	text-align: right;
 	width: 30px;
 }
@@ -255,6 +255,10 @@ input#postal, input#phone, input#credit, input#verification {
 	border: solid black 1px;
 }
 
+.validationInput {
+	position: relative;
+}
+
 textarea#description, textarea#address {
 	width: 99%;
 	height: 90px;
@@ -266,7 +270,7 @@ textarea#description, textarea#address {
 	border: solid black 1px;
 }
 
-button[type="submit"], button[type="cancel"]{
+button[type="submit"], button[type="cancel"], #btnConfirm, #btnCancel{
 	border-radius: 0px;
 	height: 40px;
 	width: 100px;
@@ -277,7 +281,7 @@ button[type="submit"], button[type="cancel"]{
 	float: right;
 }
 
-button[type="submit"]:hover, button[type="cancel"]:hover{
+button[type="submit"]:hover, button[type="cancel"]:hover, #btnConfirm:hover, #btnCancel:hover{
 	background-color: #660066;
 }
 
@@ -308,4 +312,66 @@ button[type="submit"]:hover, button[type="cancel"]:hover{
 .remainder {
 	margin-top: 30px;
 	margin-bottom: 20px;
+}
+
+.tooltip {
+	visibility: hidden;
+    width: 200px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 5px 3px 5px;
+    font-size: 12px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -19px;
+    left: 29%;
+}
+
+.validateInputElemen{
+	border : red solid 1px !important;
+}
+
+.visibleTooltip{
+	visibility: visible !important;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* The Close Button */
+.btnYesModal, .btnNoModal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.btnYesModal:hover, .btnYesModal:focus, .btnNoModal:hover, .btnNoModal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

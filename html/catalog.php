@@ -46,7 +46,7 @@
 							<td id="foto"><img class="fotoProduk" src="<?php echo $produk['gambar'];?>" alt="foto produk"></td>
 							<td id="deskripsi">
 								<font size="5"><b><?php echo $produk['name'];?></b></font><br><br>
-								<font size="5">IDR <?php echo $produk['price'];?></font><br>
+								<font size="5">IDR <?php echo number_format($produk['price']);?></font><br>
 								<?php echo $produk['description'];?>
 							</td>
 							<td id="data">

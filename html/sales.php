@@ -34,9 +34,9 @@
 							<td id="foto"><img class="fotoProduk" src="<?php echo $produk['gambar'];?>" alt="foto produk"></td>
 							<td id="deskripsi">
 								<font size="5"><b><?php echo $produk['nameProduk'];?></b></font><br><br>
-								<font size="5">IDR <?php echo $produk['totalPrice'];?></font><br>
+								<font size="5">IDR <?php echo number_format($produk['totalPrice']);?></font><br>
 								<?php echo $produk['kuantitas'];?> pcs<br>
-								@IDR <?php echo $produk['price'];?><br><br>
+								@IDR <?php echo number_format($produk['price']);?><br><br>
 								bought by <b><?php echo $produk['username'];?></b>
 							</td>
 							<td id="dataPurchase">

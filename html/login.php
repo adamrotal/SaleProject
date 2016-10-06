@@ -13,9 +13,9 @@
 		<hr>
 		<form action="postLogin.php" method="post">
 			<b>Email or Username</b><br>
-			<input type="text" name="email"><br>
+			<input type="text" name="email" required><br>
 			<b>Password</b><br>
-			<input type="password" name="password" >
+			<input type="password" name="password" required>
 			<br><br>
 			<input type="submit" value="LOGIN">
 		</form>

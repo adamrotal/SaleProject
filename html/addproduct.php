@@ -28,7 +28,7 @@
 			<b>Name</b><br>
 			<input id="name" type="text" name="name">
 			<b>Description (max 200 chars)</b><br>
-			<textarea id="description" name="description"></textarea>
+			<textarea id="description" name="description" maxlength="200"></textarea>
 			<b>Price (IDR)</b><br>
 			<input id="price" type="text" name="price">
 			<b>Photo</b><br>
