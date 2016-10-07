@@ -20,6 +20,11 @@ if(isset($_POST["submit"])) {
     }
 }
 
+if(isset($_POST["cancel"]))
+{
+    Redirect($user['id'],getYourProduct.php);
+}
+
 if (file_exists($target_file)) {
     $query = "SELECT MAX(id) as id FROM produk";
     $result = selectDataFromDB(query);
