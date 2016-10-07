@@ -1,7 +1,7 @@
 <?php 
 	function catalogDefault(){
 				
-		$query = "SELECT * FROM produk";
+		$query = "SELECT * FROM produk WHERE deleted = false ORDER BY id DESC ";
 		
 		$resultProduk = selectDataFromDB($query);
 		
@@ -20,10 +20,10 @@
 	function getCatalogSearch(){
 		$keyword = $_GET['keyword'];
 		if($_GET['category'] == "product"){
-			$query = "SELECT * FROM produk WHERE name LIKE '%$keyword%'";	
+			$query = "SELECT * FROM produk WHERE (name LIKE '%$keyword%') AND (deleted = false)";	
 		}else{
 			$_GET['category'] = "store";
-			$query = "SELECT * FROM produk WHERE namaPenjual LIKE '%$keyword%'";			
+			$query = "SELECT * FROM produk WHERE (namaPenjual LIKE '%$keyword%') AND (deleted = false)";			
 		}
 		
 		
