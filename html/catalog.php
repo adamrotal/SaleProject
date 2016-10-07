@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/dashboard.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="<?php echo $ServerRoot;?>/javascript/like.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -54,9 +55,9 @@
 								<?php echo $produk['description'];?>
 							</td>
 							<td id="data">
-								<?php echo $produk['nLike'];?> likes <br>
+								<span class="nLike"><?php echo $produk['nLike'];?></span> likes <br>
 								<?php echo $produk['nSales'];?> purchase<br><br>
-								<a id="likeButton" href="">LIKE</a>
+								<a class="likeButton" href="" onclick="like(this,event)">LIKE</a>
 								<a id="buyButton" href="<?php RoutingBuy($produk['id']);?>">BUY</a>
 							</td>
 						</tr>

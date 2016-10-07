@@ -39,8 +39,10 @@
 			<input type="file" name="photo"><br><br>
 			<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
 			<input type="hidden" value="<?php echo $produk['id'];?>" name="id">
-			<button type="cancel" onclick="#">CANCEL</button>
-			<button type="submit" value="submit">UPDATE</button>
+			<input type="submit" name="submit" value="CANCEL" >
+			<input type="submit" name="submit" value="UPDATE" >
+			<!--button type="cancel" onclick="#">CANCEL</button>
+			<button type="submit" value="submit">UPDATE</button-->
 		</form>
 	</div>
 
