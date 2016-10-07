@@ -59,28 +59,6 @@ function validationVerification() {
 	}
 }
 
-function validationDataDigit(event) {
-	event.preventDefault();
-	var regCreditCard = /^[0-9]{12}$/;
-	var idCreditCard = document.getElementById('credit').value;
-  	var checkingCreditCard = regCreditCard.test(idCreditCard);
-
-  	var regCardVerif = /^[0-9]{3}$/;
-	var idCardVerif = document.getElementById('verification').value;
-  	var checkingCardVerif = regCardVerif.test(idCardVerif);
-
-  	if(checkingCreditCard && checkingCardVerif) {
-  		validationPurchase(event);
-  	} else if (checkingCreditCard && !checkingCardVerif) {
-  		validationCreditCard();
-  	} else if (!checkingCreditCard && checkingCardVerif) {
-  		validationVerification();
-  	} else {
-  		validationCreditCard();
-  		validationVerification();
-  	}
-}
-
 function validationLoginButton(event) {
 	event.preventDefault();
 	var emailUsername = document.loginForm.email;

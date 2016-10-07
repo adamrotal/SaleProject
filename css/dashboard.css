@@ -179,7 +179,7 @@ input[type="file"]{
 
 .catalog, .sales, .purchases, .detailProduct {
 	margin-top: 50px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .fotoProduk {
@@ -259,10 +259,6 @@ input#postal, input#phone, input#credit, input#verification {
 	border: solid black 1px;
 }
 
-.validationInput {
-	position: relative;
-}
-
 textarea#description, textarea#address {
 	width: 99%;
 	height: 90px;
@@ -333,6 +329,10 @@ button[type="submit"]:hover, button[type="cancel"]:hover, #btnConfirm:hover, #bt
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
+}
+
+.validationInput {
+	position: relative;
 }
 
 .validateInputElemen{

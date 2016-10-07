@@ -35,40 +35,37 @@
 			<br>
 
 			<div class="confirm"">
-				<div class="validationInput">
-					Consignee
-					<span id="requiredConfirmPurchaseConsignee" class="tooltip">Required</span><br>
-					<input id="consignee" type="text" name="namaPembeli" value="<?php echo $user['fullName'];?>" oninput="inputValid('namaPembeli', 'requiredConfirmPurchaseConsignee')"><br>
-				</div>
-				<div class="validationInput">
-					<br>Full Address
-					<span id="requiredConfirmPurchaseFullAddress" class="tooltip">Required</span><br>
-					<textarea id="address" name="fullAddress" oninput="inputValid('fullAddress', 'requiredConfirmPurchaseFullAddress')"><?php echo $user['fullAddress'];?></textarea>
-				</div>
-				<div class="validationInput">
-					<br>Postal Code
-					<span id="requiredConfirmPurchasePostalCode" class="tooltip">Required</span><br>
-					<input id="postal" type="text" name="postalCode" value="<?php echo $user['postalCode'];?>" oninput="inputValid('postalCode', 'requiredConfirmPurchasePostalCode')"><br>
-				</div>
-				<div class="validationInput">
-					<br>Phone Number
-					<span id="requiredConfirmPurchasePhoneNumber" class="tooltip">Required</span>
-					<span id="requiredConfirmPurchasePhoneNumberOnly" class="tooltip">Number only</span><br>
-					<input id="phone" type="text" name="phoneNumber" value="<?php echo $user['phoneNumber'];?>" onchange="inputNumberValid('phoneNumber', 'requiredConfirmPurchasePhoneNumberOnly')" oninput="inputValid('phoneNumber', 'requiredConfirmPurchasePhoneNumber')"><br>
-				</div>
-				<div class="validationInput">
-					<br>12 Digits Credit Card Number
-					<span id="requiredConfirmPurchaseCreditCard" class="tooltip">Required</span>
-					<span id="requiredConfirmPurchaseCreditCard12" class="tooltip">Must be consist of 12 digits number</span><br>
-					<input id="credit" type="text" name="creditCard" onchange="validationCreditCard()" oninput="inputValid('creditCard', 'requiredConfirmPurchaseCreditCard')">
-				</div>
+				Consignee
+				<span id="requiredConfirmPurchaseConsignee" class="tooltip">Required</span><br>
+				<input id="consignee" type="text" name="namaPembeli" value="<?php echo $user['fullName'];?>" oninput="inputValid('namaPembeli', 'requiredConfirmPurchaseConsignee')"><br>
 				<br>
-				<div class="validationInput">
-					<br>3 Digit Card Verification Value
-					<span id="requiredConfirmPurchaseDigitCard" class="tooltip">Required</span>
-					<span id="requiredConfirmPurchaseDigitCard3" class="tooltip">Must be consist of 3 digits number</span><br>
-					<input id="verification" type="text" name="codeVerification" onchange="validationVerification()" oninput="inputValid('codeVerification', 'requiredConfirmPurchaseDigitCard')">
-				</div>
+				
+				Full Address
+				<span id="requiredConfirmPurchaseFullAddress" class="tooltip">Required</span><br>
+				<textarea id="address" name="fullAddress" oninput="inputValid('fullAddress', 'requiredConfirmPurchaseFullAddress')"><?php echo $user['fullAddress'];?></textarea>
+				
+				Postal Code
+				<span id="requiredConfirmPurchasePostalCode" class="tooltip">Required</span><br>
+				<input id="postal" type="text" name="postalCode" value="<?php echo $user['postalCode'];?>" oninput="inputValid('postalCode', 'requiredConfirmPurchasePostalCode')"><br>
+				<br>
+				
+				Phone Number
+				<span id="requiredConfirmPurchasePhoneNumber" class="tooltip">Required</span>
+				<span id="requiredConfirmPurchasePhoneNumberOnly" class="tooltip">Number only</span><br>
+				<input id="phone" type="text" name="phoneNumber" value="<?php echo $user['phoneNumber'];?>" onchange="inputNumberValid('phoneNumber', 'requiredConfirmPurchasePhoneNumberOnly')" oninput="inputValid('phoneNumber', 'requiredConfirmPurchasePhoneNumber')"><br>
+				<br>
+				
+				12 Digits Credit Card Number
+				<span id="requiredConfirmPurchaseCreditCard" class="tooltip">Required</span>
+				<span id="requiredConfirmPurchaseCreditCard12" class="tooltip">Must be consist of 12 digits number</span><br>
+				<input id="credit" type="text" name="creditCard" onchange="validationCreditCard()" oninput="inputValid('creditCard', 'requiredConfirmPurchaseCreditCard')">
+				<br>
+				<br>
+				
+				3 Digit Card Verification Value
+				<span id="requiredConfirmPurchaseDigitCard" class="tooltip">Required</span>
+				<span id="requiredConfirmPurchaseDigitCard3" class="tooltip">Must be consist of 3 digits number</span><br>
+				<input id="verification" type="text" name="codeVerification" onchange="validationVerification()" oninput="inputValid('codeVerification', 'requiredConfirmPurchaseDigitCard')">
 				<br><br>
 				<br>
 				<input type="hidden" name="idPembeli" value="<?php echo $user['id'];?>">
