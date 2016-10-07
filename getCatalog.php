@@ -6,8 +6,13 @@
 	
 	if(isset($_GET['keyword'])){
 		$produks = getCatalogSearch();
+		$keyword = $_GET['keyword'];
+		$category = $_GET['category'];
 	}else{
-		$produks = catalogDefault();	
+		
+		$produks = catalogDefault();
+		$keyword = "";
+		$category = "";	
 	}
 	
 

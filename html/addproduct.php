@@ -52,7 +52,7 @@
 				<br>
 				<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
 				<button type="cancel" onclick="#" value="cencel">CANCEL</button>
-				<button type="submit" value="submit" onclick="validationAddProductButton(event)">ADD</button>
+				<button type="submit" onclick="validationAddProductButton(event)">ADD</button>
 			</form>
 		</div>
 	</div>

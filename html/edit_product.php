@@ -36,7 +36,7 @@
 			<b>Price (IDR)</b><br>
 			<input id="price" type="text" name="price" value="<?php echo $produk['price'];?>">
 			<b>Photo</b><br>
-			<input type="file" name="photo"><br><br>
+			<input type="file" name="photo" disabled=""><br><br>
 			<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
 			<input type="hidden" value="<?php echo $produk['id'];?>" name="id">
 			<input type="submit" name="submit" value="CANCEL" >

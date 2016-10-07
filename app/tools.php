@@ -1,10 +1,6 @@
 <?php
 	function issetEcho($isDataSet){
-		if(isset($isDataSet)){
-			echo $isDataSet;
-		}else{
-			echo "";
-		}
+		echo $isDataSet;
 	}
 
 	function ifValueChecked($value1,$value2){
