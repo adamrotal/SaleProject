@@ -9,7 +9,11 @@
 </head>
 <body>
 	<div class="container">
-		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
+		<center>
+			<h1 class="logo">
+				<span class="sale">Sale</span><span class="project">Project</span>
+			</h1>
+		</center>
 		<h2>Please Login</h2>
 		<hr>
 		<form id="myFormLogin" action="postLogin.php" method="post" name="loginForm">
@@ -25,7 +29,8 @@
 			<br>
 			<input type="submit" value="LOGIN" onclick="validationLoginButton(event)">
 		</form>
-		<p><b>Don't have an account yet? Register <a href="<?php echo $ServerRoot;?>/getRegister.php">here</a></b></p>
+		<br><br>
+		<p><b>Don't have an account yet? Register <a class="btnHere" href="<?php echo $ServerRoot;?>/getRegister.php">here</a></b></p>
 	</div>
 	
 

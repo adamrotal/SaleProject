@@ -30,40 +30,58 @@ ul.navig {
     margin-bottom: 30px;
     padding: 0;
     overflow: auto;
-    background-color: #a902b3;
+    background-color: transparent;
     
 }
 
 ul.navig li {
-	width: 19.9%;
+	width: 19.5%;
     float: left;
-    border-right: 1px solid #ffffff;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-right: 0px;
 }
+
+ul.navig li:last-child {
+    border-right: 2px solid black;
+
+}
+	
 
 ul.navig li a {
     display: block;
-    color: white;
+    color: black;
+    font-weight: bold;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
 }
 
-ul.navig li:last-child {
-	
-	border-right: none;
-}
 
 ul.navig li a:hover:not(.active) {
-	background-color: #660066;
+	background-color: #0066B4;
+	color: white;
 }
 
 ul.navig li a.active {
-	background-color: #660066;
+	background-color: #0066B4;
+	color: white;
 }	
 
 .logo{
-	height: 65px;
-	margin-bottom: 50px;
+	font-size: 400%;
+	font-weight: bold;
+	letter-spacing: 3px;
+	margin-bottom: 70px;
+	margin-top: -10px;
+}
+
+.sale {
+	color: #0066B4;
+}
+
+.project {
+	color: #A30000;
 }
 
 .product{
@@ -138,12 +156,12 @@ input[type="file"]{
 	width: 55px;
 	border: 0px;
 	color: white;
-	background-color: #a902b3;
+	background-color: #0066B4;
 	margin-left: 10px;
 }
 
 #searching:hover {
-	background-color: #660066;
+	background-color: #A30000;
 }
 
 .searchbox {
@@ -167,6 +185,11 @@ input[type="file"]{
 #userLogOut{
 	text-align: right;
 	margin-bottom: 30px;
+}
+
+#logoutButton {
+	text-decoration: none;
+	color: #A30000;
 }
 
 #radio {
@@ -239,11 +262,11 @@ input[type="file"]{
 }
 
 #likeButton:hover {
-	color: #a902b3;
+	color: #A30000;
 }
 
 #buyButton:hover {
-	color: #a902b3;
+	color: #A30000;
 }
 
 
@@ -276,13 +299,13 @@ button[type="submit"], button[type="cancel"], #btnConfirm, #btnCancel{
 	width: 100px;
 	border: 0px;
 	color: white;
-	background-color: #a902b3;
+	background-color: #0066B4;
 	margin-left: 20px;
 	float: right;
 }
 
 button[type="submit"]:hover, button[type="cancel"]:hover, #btnConfirm:hover, #btnCancel:hover{
-	background-color: #660066;
+	background-color: #A30000;
 }
 
 #editButton {

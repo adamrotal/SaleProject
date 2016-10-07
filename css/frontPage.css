@@ -49,8 +49,12 @@ input[type="submit"]{
 	width: 80px;
 	border: 0px;
 	color: white;
-	background-color: #a902b3;
+	background-color: #0066B4;
 	float: right;
+}
+
+input[type="submit"]:hover{
+	background-color: #A30000;
 }
 
 a{
@@ -60,11 +64,27 @@ a{
 hr{
 	border: solid black 1px;
 }
+
 .logo{
-	height: 65px;
-	margin-bottom: 50px;
+	font-size: 400%;
+	font-weight: bold;
+	letter-spacing: 3px;
+	margin-bottom: 70px;
+	margin-top: -10px;
 }
 
+.sale {
+	color: #0066B4;
+}
+
+.project {
+	color: #A30000;
+}
+
+.btnHere {
+	text-decoration: none;
+	color: #0066B4;
+}
 
 .tooltip {
 	visibility: hidden;

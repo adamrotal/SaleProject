@@ -10,7 +10,11 @@
 
 <body>
 	<div class="container">
-		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
+		<center>
+			<h1 class="logo">
+				<span class="sale">Sale</span><span class="project">Project</span>
+			</h1>
+		</center>
 		<h2>Please Register</h2>
 		<hr>
 		<form id="myFormRegister" action="postRegister.php" method="post" name="registerForm">
@@ -58,7 +62,8 @@
 			<br>
 			<input type="submit" value="Register" onclick="validationRegisterButton(event)">
 		</form>
-		<p><b>Already registered? Login <a href="<?php echo $ServerRoot;?>/getLogin.php">here</a></b></p>
+		<br><br>
+		<p><b>Already registered? Login <a class="btnHere" href="<?php echo $ServerRoot;?>/getLogin.php">here</a></b></p>
 	</div>
 	
 
