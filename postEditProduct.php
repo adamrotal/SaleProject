@@ -2,7 +2,7 @@
 <?php
 require "include.php";
 $_GET["id_active"] = $_POST["id_active"];
-$user = autentificatin();
+$user = authentification();
 
 $target_dir = "gambar/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -64,7 +64,7 @@ if ($uploadOk == 0) {
         }
         $idUpload = insertDataToDB($query);
 
-        Redirect($user['id'],getYourProduct.php);
+        Redirect($user['id'],'getYourProduct.php');
 
     } else {
         echo "Sorry, there was an error uploading your file.";

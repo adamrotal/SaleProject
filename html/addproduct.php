@@ -44,7 +44,7 @@
 				<input type="file" name="photo" onchange="inputValid('photo', 'requiredAddProductPhoto')">
 				<br>
 				<br>
-				<input type="hidden" value="<php echo $user['id']?>" name="id_active">
+				<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
 				<button type="cancel" onclick="#">CANCEL</button>
 				<button type="submit" value="submit" onclick="validationAddProductButton(event)">ADD</button>
 			</form>
