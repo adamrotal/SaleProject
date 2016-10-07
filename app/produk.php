@@ -20,10 +20,10 @@
 	function getCatalogSearch(){
 		$keyword = $_GET['keyword'];
 		if($_GET['category'] == "product"){
-			$query = "SELECT * FROM produk WHERE (name LIKE '%$keyword%') AND (deleted = false)";	
+			$query = "SELECT * FROM produk WHERE (name LIKE '%$keyword%') AND (deleted = false) ORDER BY id DESC";	
 		}else{
 			$_GET['category'] = "store";
-			$query = "SELECT * FROM produk WHERE (namaPenjual LIKE '%$keyword%') AND (deleted = false)";			
+			$query = "SELECT * FROM produk WHERE (namaPenjual LIKE '%$keyword%') AND (deleted = false) ORDER BY id DESC";			
 		}
 		
 		
@@ -44,7 +44,7 @@
 	function yourProduk(){
 		global $user;
 		$idUser = $user['id'];
-		$query = "SELECT * FROM produk WHERE idPenjual='$idUser'";
+		$query = "SELECT * FROM produk WHERE (idPenjual='$idUser') AND (deleted = false) ORDER BY id DESC";
 		
 		$resultProduk = selectDataFromDB($query);
 		
@@ -71,7 +71,7 @@
 		$idUser = $user['id'];
 		$result = array();
 
-		$query = "SELECT * FROM sales WHERE idPembeli = '$idUser'";
+		$query = "SELECT * FROM sales WHERE idPembeli = '$idUser' ORDER BY id DESC";
 		$resultProduk = selectDataFromDB($query);
 
 		if($resultProduk != null){
@@ -131,7 +131,7 @@
 		$idUser = $user['id'];
 		$result = array();
 
-		$query = "SELECT * FROM sales WHERE idPenjual = '$idUser'";
+		$query = "SELECT * FROM sales WHERE idPenjual = '$idUser' ORDER BY id DESC";
 		$resultProduk = selectDataFromDB($query);
 
 		if($resultProduk != null){
