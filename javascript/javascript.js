@@ -1,9 +1,18 @@
 function countPrice() {
 	var price = document.getElementById('initialPrice').value;
 	var nBuy = document.getElementById('quantity').value;
-	var total = parseInt(nBuy * price);
-
-	document.getElementById('totalPrice').innerHTML = total.toLocaleString();
+	
+	if (nBuy != "") {
+		if (parseInt(nBuy) > 0) {
+			var total = parseInt(nBuy * price);
+			document.getElementById('totalPrice').innerHTML = total.toLocaleString();
+		} else {
+			return false;
+		}
+	} else {
+		var newPrice = parseInt(price);
+		document.getElementById('totalPrice').innerHTML = newPrice.toLocaleString();
+	}
 }
 
 function validationPurchase(event) {

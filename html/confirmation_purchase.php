@@ -28,7 +28,7 @@
 				<span class="product">Product</span>  : Sembarang<br>
 				<input id="initialPrice" type="hidden" name="initPrice" value="<?php echo $produk['price'];?>"> 
 				<span class="price">Price</span> : IDR <span id="aPrice"><?php echo number_format($produk['price']);?></span><br>
-				<span class="qual">Quantity</span> : <input id="quantity" value="1" name="kuantitas" oninput="countPrice()"> PCS<br>
+				<span class="qual">Quantity</span> : <input id="quantity" type="number" value="1" name="kuantitas" oninput="countPrice()"> PCS<br>
 				<span class="totalprice">Total Price</span> : IDR <span id="totalPrice"><?php echo number_format($produk['price']);?></span><br>
 				<span class="del">Delivery To</span> : <br>
 			</div>
