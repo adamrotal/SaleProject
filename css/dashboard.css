@@ -1,3 +1,18 @@
+input[type="submit"]{
+	border-radius: 0px;
+	height: 40px;
+	width: 80px;
+	border: 0px;
+	color: white;
+	background-color: #0066B4;
+	float: right;
+	margin-left: 50px;
+}
+
+input[type="submit"]:hover{
+	background-color: #A30000;
+}
+
 body{
 	font-family: 'Raleway',sans-serif;
 }
@@ -30,40 +45,58 @@ ul.navig {
     margin-bottom: 30px;
     padding: 0;
     overflow: auto;
-    background-color: #a902b3;
+    background-color: transparent;
     
 }
 
 ul.navig li {
-	width: 19.9%;
+	width: 19.5%;
     float: left;
-    border-right: 1px solid #ffffff;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-right: 0px;
 }
+
+ul.navig li:last-child {
+    border-right: 2px solid black;
+
+}
+	
 
 ul.navig li a {
     display: block;
-    color: white;
+    color: black;
+    font-weight: bold;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
 }
 
-ul.navig li:last-child {
-	
-	border-right: none;
-}
 
 ul.navig li a:hover:not(.active) {
-	background-color: #660066;
+	background-color: #0066B4;
+	color: white;
 }
 
 ul.navig li a.active {
-	background-color: #660066;
+	background-color: #0066B4;
+	color: white;
 }	
 
 .logo{
-	height: 65px;
-	margin-bottom: 50px;
+	font-size: 400%;
+	font-weight: bold;
+	letter-spacing: 3px;
+	margin-bottom: 70px;
+	margin-top: -10px;
+}
+
+.sale {
+	color: #0066B4;
+}
+
+.project {
+	color: #A30000;
 }
 
 .product{
@@ -78,9 +111,9 @@ ul.navig li a.active {
 	margin-right: 35px
 }
 
-#quality {
+#quantity {
 	text-align: right;
-	width: 30px;
+	width: 50px;
 }
 
 .totalprice{
@@ -128,18 +161,22 @@ input[type="button"]{
 	border-radius: 0px;
 }
 
+input[type="file"]{
+	margin-top: 10px;
+}
+
 #searching{
 	border-radius: 0px;
 	height: 40px;
 	width: 55px;
 	border: 0px;
 	color: white;
-	background-color: #a902b3;
+	background-color: #0066B4;
 	margin-left: 10px;
 }
 
 #searching:hover {
-	background-color: #660066;
+	background-color: #A30000;
 }
 
 .searchbox {
@@ -165,6 +202,11 @@ input[type="button"]{
 	margin-bottom: 30px;
 }
 
+#logoutButton {
+	text-decoration: none;
+	color: #A30000;
+}
+
 #radio {
 	text-align: left;
 	height: 100%;
@@ -175,7 +217,7 @@ input[type="button"]{
 
 .catalog, .sales, .purchases, .detailProduct {
 	margin-top: 50px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .fotoProduk {
@@ -210,7 +252,7 @@ input[type="button"]{
 	vertical-align: top;
 }
 
-#likeButton {
+.likeButton {
 	border-radius: 0px;
 	height: 40px;
 	width: 55px;
@@ -234,12 +276,12 @@ input[type="button"]{
 	background-color: transparent;
 }
 
-#likeButton:hover {
-	color: #a902b3;
+.likeButton:hover {
+	color: #A30000;
 }
 
 #buyButton:hover {
-	color: #a902b3;
+	color: #A30000;
 }
 
 
@@ -266,19 +308,19 @@ textarea#description, textarea#address {
 	border: solid black 1px;
 }
 
-button[type="submit"], button[type="cancel"]{
+button[type="submit"], button[type="cancel"], #btnConfirm, #btnCancel{
 	border-radius: 0px;
 	height: 40px;
 	width: 100px;
 	border: 0px;
 	color: white;
-	background-color: #a902b3;
+	background-color: #0066B4;
 	margin-left: 20px;
 	float: right;
 }
 
-button[type="submit"]:hover, button[type="cancel"]:hover{
-	background-color: #660066;
+button[type="submit"]:hover, button[type="cancel"]:hover, #btnConfirm:hover, #btnCancel:hover{
+	background-color: #A30000;
 }
 
 #editButton {
@@ -308,4 +350,74 @@ button[type="submit"]:hover, button[type="cancel"]:hover{
 .remainder {
 	margin-top: 30px;
 	margin-bottom: 20px;
+}
+
+.tooltip {
+	visibility: hidden;
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    opacity: 0.7;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 5px 3px 5px;
+    font-size: 12px;
+    margin-left: 10px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.validationInput {
+	position: relative;
+}
+
+.validateInputElemen{
+	border : red solid 1px !important;
+}
+
+.visibleTooltip{
+	visibility: visible !important;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* The Close Button */
+.btnYesModal, .btnNoModal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.btnYesModal:hover, .btnYesModal:focus, .btnNoModal:hover, .btnNoModal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dislikeButton{
+	color: red !important;
 }

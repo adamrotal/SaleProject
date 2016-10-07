@@ -2,15 +2,17 @@
 <?php
 require "include.php";
 $_GET["id_active"] = $_POST["id_active"];
-$user = autentification();
+$user = authentification();
 
-$target_dir = "gambar/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_dir = $DocumentRoot . "/gambar/";
+$target_file = $target_dir . basename($_FILES["photo"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
+    
 if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    echo $_FILES["photo"]["tmp_name"];
+    $check = getimagesize($_FILES["photo"]["tmp_name"]);
     if($check !== false) {
         echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
@@ -22,18 +24,18 @@ if(isset($_POST["submit"])) {
 
 if(isset($_POST["cancel"]))
 {
-    Redirect($user['id'],getYourProduct.php);
+    Redirect($user['id'],'getYourProduct.php');
 }
-
+    
 if (file_exists($target_file)) {
     $query = "SELECT MAX(id) as id FROM produk";
     $result = selectDataFromDB(query);
     $result = $result->fetch_assoc();
-    $name = $_FILES["fileToUpload"]["name"] + "("+$result['id']+")";
+    $name = $_FILES["photo"]["name"] + "("+$result['id']+")";
     $uploadOk = 1;
 }
 
-if ($_FILES["fileToUpload"]["size"] > 500000) {
+if ($_FILES["photo"]["size"] > 500000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 }
@@ -44,22 +46,26 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
     $uploadOk = 0;
 }
 
+    
 if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 
 } else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
         //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        
         $idPenjual = $user['id'];
         $name = $_POST['name'];
         $description = $_POST['description'];
         $price = $_POST['price'];
-        $gambar = $_FILES["fileToUpload"]["name"];
+        $gambar = $_FILES["photo"]["name"];
         $namaPenjual = $user['username'];
 
-        $query = "UPDATE FROM produk (idPenjual,name,description,price,gambar,tanggalDiTambah,namaPenjual) VALUES('$idPenjual','$name','$description','$price','$gambar',CURDATE(),'$namaPenjual') WHERE idPenjual = '$idPenjual'";
+        $query = "INSERT INTO produk (idPenjual,name,description,price,gambar,tanggalDiTambah,namaPenjual) VALUES('$idPenjual','$name','$description','$price','$gambar',CURDATE(),'$namaPenjual') WHERE idPenjual = '$idPenjual'";
+        echo $query;
+        die();
         $idUpload = insertDataToDB($query);
-        Redirect($user['id'],getYourProduct.php);
+        Redirect($user['id'],'getYourProduct.php');
 
     } else {
         echo "Sorry, there was an error uploading your file.";

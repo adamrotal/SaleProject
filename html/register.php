@@ -5,35 +5,65 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/frontPage.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="<?php echo $ServerRoot;?>/javascript/javascript.js"></script>
 </head>
 
 <body>
 	<div class="container">
-		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
+		<center>
+			<h1 class="logo">
+				<span class="sale">Sale</span><span class="project">Project</span>
+			</h1>
+		</center>
 		<h2>Please Register</h2>
 		<hr>
-		<form action="postRegister.php" method="post">
-			<b>Full Name</b><br>
-			<input type="text" name="fullName"><br>
-			<b>Username</b><br>
-			<input type="text" name="username"><br>
-			<b>Email</b><br>
-			<input type="text" name="email"><br>
-			<b>Password</b><br>
-			<input type="password" name="password"><br>
-			<b>Confirm Password</b><br>
-			<input type="password" name="confirmpassword"><br>
-			<b>Full Address</b><br>
-			<textarea name="fullAddress"></textarea><br>
-			<b>Postal Code</b><br>
-			<input type="text" name="postalCode"><br>
-			<b>Phone Number</b><br>
-			<input type="text" name="phoneNumber"><br>
-
-			<br><br>
-			<input type="submit" value="Register">
+		<form id="myFormRegister" action="postRegister.php" method="post" name="registerForm">
+			<b>Full Name</b>
+			<span id="requiredRegisterFullName" class="tooltip">Required</span><br>
+			<input class="formValidation" type="text" name="fullName" oninput="inputValid('fullName', 'requiredRegisterFullName')">
+			<br>
+			
+			<b>Username</b>
+			<span id="requiredRegisterUsername" class="tooltip">Required</span>
+			<input class="formValidation" type="text" name="username" oninput="inputValid('username', 'requiredRegisterUsername')"><br>
+			<br>
+			
+			<b>Email</b>
+			<span id="requiredRegisterEmail" class="tooltip">Required</span>
+			<span id="requiredRegisterEmailFormat" class="tooltip emailFormat">Email not valid</span><br>
+			<input type="text" name="email" onchange="inputEmailValid('email', 'requiredRegisterEmailFormat')" oninput="inputValid('email', 'requiredRegisterEmail')">
+			<br>
+			
+			<b>Password</b>
+			<span id="requiredRegisterPassword" class="tooltip">Required</span><br>
+			<input class="formValidation" type="password" name="password" oninput="inputValid('password', 'requiredRegisterPassword')">
+			<br>
+			
+			<b>Confirm Password</b>
+			<span id="requiredRegisterConfirmPass" class="tooltip">Required</span><br>
+			<input class="formValidation" type="password" name="confirmpassword" oninput="inputValid('confirmpassword', 'requiredRegisterConfirmPass')">
+			<br>
+			
+			<b>Full Address</b>
+			<span id="requiredRegisterFullAddress" class="tooltip">Required</span><br>
+			<textarea class="formValidation" name="fullAddress" oninput="inputValid('fullAddress', 'requiredRegisterFullAddress')"></textarea>
+			<br>
+			
+			<b>Postal Code</b>
+			<span id="requiredRegisterPostalCode" class="tooltip">Required</span><br>
+			<input class="formValidation" type="text" name="postalCode" oninput="inputValid('postalCode', 'requiredRegisterPostalCode')">
+			<br>
+			<b>Phone Number</b>
+			<span id="requiredRegisterPhoneNumber" class="tooltip">Required</span>
+			<span id="requiredRegisterPhoneNumberOnly" class="tooltip">Number only</span><br>
+			<input class="formValidation" type="text" name="phoneNumber" onchange="inputNumberValid('phoneNumber', 'requiredRegisterPhoneNumberOnly')" oninput="inputValid('phoneNumber', 'requiredRegisterPhoneNumber')">
+			<br>
+			<br>
+			<br>
+			<input type="submit" value="Register" onclick="validationRegisterButton(event)">
 		</form>
-		<p><b>Already registered? Login <a href="<?php echo $ServerRoot;?>/getLogin.php">here</a></b></p>
+		<br><br>
+		<p><b>Already registered? Login <a class="btnHere" href="<?php echo $ServerRoot;?>/getLogin.php">here</a></b></p>
 	</div>
 	
 
