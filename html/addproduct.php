@@ -28,21 +28,7 @@
 		<h1>Please add your product here</h1>
 		<hr>
 		
-	<div class="detailProduct">
-		<form action="postAddFile.php" method="post" enctype="multipart/form-data">
-			<b>Name</b><br>
-			<input id="name" type="text" name="name">
-			<b>Description (max 200 chars)</b><br>
-			<textarea id="description" name="description"></textarea>
-			<b>Price (IDR)</b><br>
-			<input id="price" type="text" name="price">
-			<b>Photo</b><br>
-			<input type="file" name="fileToUpload"><br><br>
-			<input type="hidden" value="<php echo $user['id']?>" name="id_active">
-			<button type="cancel" value="cancel">CANCEL</button>
-			<button type="submit" value="submit">ADD</button>
-		</form>
-	</div>
+	
 
 		<div class="detailProduct">
 			<form id="myFormAddProduct" action="postAddFile.php" method="post" enctype="multipart/form-data" name="addProductForm">
