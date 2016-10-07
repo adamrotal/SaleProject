@@ -15,13 +15,13 @@
 		<form id="myFormLogin" action="postLogin.php" method="post" name="loginForm">
 			<b>Email or Username</b><br>
 			<div class="validationInput">	
-				<input class="formValidation" type="text" name="email" oninput="loginInputValid('email', 'requiredLoginEmail')">
+				<input class="formValidation" type="text" name="email" oninput="inputValid('email', 'requiredLoginEmail')">
 				<span id="requiredLoginEmail" class="tooltip">Required</span>
 			</div>
 			<br>
 			<b>Password</b><br>
 			<div class="validationInput">
-				<input class="formValidation" type="password" name="password" oninput="loginInputValid('password', 'requiredLoginPassword')">
+				<input class="formValidation" type="password" name="password" oninput="inputValid('password', 'requiredLoginPassword')">
 				<span id="requiredLoginPassword" class="tooltip pass">Required</span>
 			</div>
 			<br><br>

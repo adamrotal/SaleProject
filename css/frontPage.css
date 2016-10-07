@@ -83,6 +83,14 @@ hr{
     left: 23%;
 }
 
+.numberonly {
+	width: 80px !important;
+}
+
+.emailFormat {
+	width: 100px !important;
+}
+
 .pass {
 	left: 13% !important;
 }

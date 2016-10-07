@@ -103,32 +103,114 @@ function validationLoginButton(event) {
 
 function validationRegisterButton(event) {
 	event.preventDefault();
-	var emailUsername = document.loginForm.email;
-	var pass = document.loginForm.password;
-	
-	if (emailUsername.value == "") {
-		var tooltip = document.getElementById('requiredLoginEmail');
+	var fullName = document.registerForm.fullName;
+	var username = document.registerForm.username;
+	var email = document.registerForm.email;
+	var pass = document.registerForm.password;
+	var confirmPass = document.registerForm.confirmpassword;
+	var fullAddress = document.registerForm.fullAddress;
+	var postalCode = document.registerForm.postalCode;
+	var phoneNumber = document.registerForm.phoneNumber;
+	var isComplete = true;
+
+
+	if (fullName.value == "") {
+		var tooltip = document.getElementById('requiredRegisterFullName');
 		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (username.value == "") {
+		var tooltip = document.getElementById('requiredRegisterUsername');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (email.value == "") {
+		var tooltip = document.getElementById('requiredRegisterEmail');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
 	}
 
 	if (pass.value == "") {
-		var tooltip = document.getElementById('requiredLoginPassword');
+		var tooltip = document.getElementById('requiredRegisterPassword');
 		tooltip.className += " visibleTooltip";
+		isComplete = false;
 	}
 
-	if (emailUsername.value != "" && pass.value != "") {
-		document.getElementById("myFormLogin").submit();
+	if (confirmPass.value == "") {
+		var tooltip = document.getElementById('requiredRegisterConfirmPass');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (fullAddress.value == "") {
+		var tooltip = document.getElementById('requiredRegisterFullAddress');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (postalCode.value == "") {
+		var tooltip = document.getElementById('requiredRegisterPostalCode');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (phoneNumber.value == "") {
+		var tooltip = document.getElementById('requiredRegisterPhoneNumber');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+
+	if (isComplete) {
+		console.log("yey");
+		//document.getElementById("myFormLogin").submit();
 	}	
 }
 
-function loginInputValid(name, tooltipID) {
-	var emailUsername = document.getElementsByName(name);
-
-	if (emailUsername.value == "") {
+function inputValid(name, tooltipID) {
+	var input = document.getElementsByName(name)[0];
+	
+	if (input.value == "") {
 		var tooltip = document.getElementById(tooltipID);
 		tooltip.className += " visibleTooltip";
 	} else {
 		var tooltip = document.getElementById(tooltipID);
 		tooltip.className = "tooltip";
+	}
+}
+
+function inputNumberValid(name, tooltipID) {
+	var number = document.getElementsByName(name)[0];
+	var reg = new RegExp('^\\d+$');
+	var checkingNumber = reg.test(number.value);
+	//console.log(number.value);
+
+	if (checkingNumber || number.value == "") {
+		var tooltip = document.getElementById(tooltipID);
+		tooltip.className = "tooltip";
+		//console.log("number only");
+	} else {		
+		var tooltip = document.getElementById(tooltipID);
+		tooltip.className += " visibleTooltip";
+		//console.log("not number only")
+	}
+}
+
+function inputEmailValid(nama, tooltipID) {
+    var email = document.getElementsByName(nama)[0];
+    var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	var checkingFormat = reg.test(email.value);
+	//console.log(number.value);
+
+	if (checkingFormat || email.value == "") {
+		var tooltip = document.getElementById(tooltipID);
+		tooltip.className = "tooltip";
+		console.log("email valid");
+	} else {		
+		var tooltip = document.getElementById(tooltipID);
+		tooltip.className += " visibleTooltip";
+		console.log("email not valid")
 	}
 }
