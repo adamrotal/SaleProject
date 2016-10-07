@@ -83,6 +83,10 @@ hr{
     left: 23%;
 }
 
+.tooltipPurchase {
+	width: 200px !important;
+}
+
 .numberonly {
 	width: 80px !important;
 }

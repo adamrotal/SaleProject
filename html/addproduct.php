@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/dashboard.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="<?php echo $ServerRoot;?>/javascript/javascript.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -24,18 +25,32 @@
 		<hr>
 		
 	<div class="detailProduct">
-		<form action="postAddFile.php" method="post" enctype="multipart/form-data">
+		<form id="myFormAddProduct" action="postAddFile.php" method="post" enctype="multipart/form-data" name="addProductForm">
 			<b>Name</b><br>
-			<input id="name" type="text" name="name">
+			<div class="validationInput">	
+				<input id="name" type="text" name="name" oninput="inputValid('name', 'requiredAddProductName')">
+				<span id="requiredAddProductName" class="tooltip">Required</span>
+			</div>
 			<b>Description (max 200 chars)</b><br>
-			<textarea id="description" name="description" maxlength="200"></textarea>
+			<div class="validationInput">	
+				<textarea id="description" name="description" maxlength="200" oninput="inputValid('description', 'requiredAddProductDescription')"></textarea>
+				<span id="requiredAddProductDescription" class="tooltip">Required</span>
+			</div>
 			<b>Price (IDR)</b><br>
-			<input id="price" type="text" name="price">
+			<div class="validationInput">	
+				<input id="price" type="text" name="price" onchange="inputNumberValid('price', 'requiredAddProductPriceNumber')" oninput="inputValid('price', 'requiredAddProductPrice')">
+				<span id="requiredAddProductPrice" class="tooltip">Required</span>
+				<span id="requiredAddProductPriceNumber" class="tooltip numberonly">Not valid</span>
+			</div>
 			<b>Photo</b><br>
-			<input type="file" name="photo"><br><br>
+			<div class="validationInput">	
+				<input type="file" name="photo" onchange="inputValid('photo', 'requiredAddProductPhoto')">
+				<span id="requiredAddProductPhoto" class="tooltip">Required</span>
+			</div>
+			<br><br>
 			<input type="hidden" value="<php echo $user['id']?>" name="id_active">
 			<button type="cancel" onclick="#">CANCEL</button>
-			<button type="submit" value="submit">ADD</button>
+			<button type="submit" value="submit" onclick="validationAddProductButton(event)">ADD</button>
 		</form>
 	</div>
 	</div>

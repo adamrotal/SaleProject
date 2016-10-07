@@ -13,7 +13,7 @@
 		<center><img class="logo" src="<?php echo $ServerRoot;?>/aset/logoText.png"></center>
 		<h2>Please Register</h2>
 		<hr>
-		<form action="postRegister.php" method="post" name="registerForm">
+		<form id="myFormRegister" action="postRegister.php" method="post" name="registerForm">
 			<b>Full Name</b><br>
 			<div class="validationInput">
 				<input class="formValidation" type="text" name="fullName" oninput="inputValid('fullName', 'requiredRegisterFullName')">

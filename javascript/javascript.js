@@ -164,9 +164,46 @@ function validationRegisterButton(event) {
 
 
 	if (isComplete) {
-		console.log("yey");
-		//document.getElementById("myFormLogin").submit();
+		document.getElementById("myFormRegister").submit();
 	}	
+}
+
+function validationAddProductButton(event) {
+	event.preventDefault();
+	var name = document.addProductForm.name;
+	var description = document.addProductForm.description;
+	var price = document.addProductForm.price;
+	var photo = document.addProductForm.photo;
+	var isComplete = true;
+	
+	if (name.value == "") {
+		var tooltip = document.getElementById('requiredAddProductName');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (description.value == "") {
+		var tooltip = document.getElementById('requiredAddProductDescription');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (price.value == "") {
+		var tooltip = document.getElementById('requiredAddProductPrice');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (price.value == "") {
+		var tooltip = document.getElementById('requiredAddProductPhoto');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (isComplete) {
+		console.log("complitos")
+		//document.getElementById("myFormAddProduct").submit();
+	}
 }
 
 function inputValid(name, tooltipID) {

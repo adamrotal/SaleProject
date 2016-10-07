@@ -316,7 +316,7 @@ button[type="submit"]:hover, button[type="cancel"]:hover, #btnConfirm:hover, #bt
 
 .tooltip {
 	visibility: hidden;
-    width: 200px;
+    width: 50px;
     background-color: red;
     color: #fff;
     text-align: center;
