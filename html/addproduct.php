@@ -34,7 +34,7 @@
 			<b>Photo</b><br>
 			<input type="file" name="photo"><br><br>
 			<input type="hidden" value="<php echo $user['id']?>" name="id_active">
-			<button type="cancel" onclick="#">CANCEL</button>
+			<button type="cancel" value="cancel">CANCEL</button>
 			<button type="submit" value="submit">ADD</button>
 		</form>
 	</div>

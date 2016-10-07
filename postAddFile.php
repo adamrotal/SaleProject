@@ -2,7 +2,7 @@
 <?php
 require "include.php";
 $_GET["id_active"] = $_POST["id_active"];
-$user = autentificatin();
+$user = autentification();
 
 $target_dir = "gambar/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
