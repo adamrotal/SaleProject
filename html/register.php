@@ -14,54 +14,54 @@
 		<h2>Please Register</h2>
 		<hr>
 		<form id="myFormRegister" action="postRegister.php" method="post" name="registerForm">
-			<b>Full Name</b><br>
 			<div class="validationInput">
+				<b>Full Name</b>
+				<span id="requiredRegisterFullName" class="tooltip">Required</span><br>
 				<input class="formValidation" type="text" name="fullName" oninput="inputValid('fullName', 'requiredRegisterFullName')">
-				<span id="requiredRegisterFullName" class="tooltip">Required</span>
 			</div>
 			<br>
-			<b>Username</b><br>
 			<div class="validationInput">
-				<input class="formValidation" type="text" name="username" oninput="inputValid('username', 'requiredRegisterUsername')">
+				<b>Username</b>
 				<span id="requiredRegisterUsername" class="tooltip">Required</span>
+				<input class="formValidation" type="text" name="username" oninput="inputValid('username', 'requiredRegisterUsername')"><br>
 			</div>
 			<br>
-			<b>Email</b><br>
 			<div class="validationInput">
-				<input type="text" name="email" onchange="inputEmailValid('email', 'requiredRegisterEmailFormat')" oninput="inputValid('email', 'requiredRegisterEmail')">
+				<b>Email</b>
 				<span id="requiredRegisterEmail" class="tooltip">Required</span>
-				<span id="requiredRegisterEmailFormat" class="tooltip emailFormat">Email not valid</span>
+				<span id="requiredRegisterEmailFormat" class="tooltip emailFormat">Email not valid</span><br>
+				<input type="text" name="email" onchange="inputEmailValid('email', 'requiredRegisterEmailFormat')" oninput="inputValid('email', 'requiredRegisterEmail')">
 			</div>
 			<br>
-			<b>Password</b><br>
 			<div class="validationInput">
+				<b>Password</b>
+				<span id="requiredRegisterPassword" class="tooltip">Required</span><br>
 				<input class="formValidation" type="password" name="password" oninput="inputValid('password', 'requiredRegisterPassword')">
-				<span id="requiredRegisterPassword" class="tooltip">Required</span>
 			</div>
 			<br>
-			<b>Confirm Password</b><br>
 			<div class="validationInput">
+				<b>Confirm Password</b>
+				<span id="requiredRegisterConfirmPass" class="tooltip">Required</span><br>
 				<input class="formValidation" type="password" name="confirmpassword" oninput="inputValid('confirmpassword', 'requiredRegisterConfirmPass')">
-				<span id="requiredRegisterConfirmPass" class="tooltip">Required</span>
 			</div>
 			<br>
-			<b>Full Address</b><br>
 			<div class="validationInput">
+				<b>Full Address</b>
+				<span id="requiredRegisterFullAddress" class="tooltip">Required</span><br>
 				<textarea class="formValidation" name="fullAddress" oninput="inputValid('fullAddress', 'requiredRegisterFullAddress')"></textarea>
-				<span id="requiredRegisterFullAddress" class="tooltip">Required</span>
 			</div>
 			<br>
-			<b>Postal Code</b><br>
 			<div class="validationInput">
+				<b>Postal Code</b>
+				<span id="requiredRegisterPostalCode" class="tooltip">Required</span><br>
 				<input class="formValidation" type="text" name="postalCode" oninput="inputValid('postalCode', 'requiredRegisterPostalCode')">
-				<span id="requiredRegisterPostalCode" class="tooltip">Required</span>
 			</div>
 			<br>
-			<b>Phone Number</b><br>
 			<div class="validationInput">
-				<input class="formValidation" type="text" name="phoneNumber" onchange="inputNumberValid('phoneNumber', 'requiredRegisterPhoneNumberOnly')" oninput="inputValid('phoneNumber', 'requiredRegisterPhoneNumber')">
+				<b>Phone Number</b>
 				<span id="requiredRegisterPhoneNumber" class="tooltip">Required</span>
-				<span id="requiredRegisterPhoneNumberOnly" class="tooltip numberonly">Number only</span>
+				<span id="requiredRegisterPhoneNumberOnly" class="tooltip">Number only</span><br>
+				<input class="formValidation" type="text" name="phoneNumber" onchange="inputNumberValid('phoneNumber', 'requiredRegisterPhoneNumberOnly')" oninput="inputValid('phoneNumber', 'requiredRegisterPhoneNumber')">
 			</div>
 			<br>
 

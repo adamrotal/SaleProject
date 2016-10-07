@@ -36,11 +36,11 @@ function validationCreditCard() {
 	var id = document.getElementById('credit').value;
   	var checking = reg.test(id); 
 
-	if(checking){
-		var tooltip = document.getElementById('creditCardTooltip');
+	if (checking || id == "") {
+		var tooltip = document.getElementById('requiredConfirmPurchaseCreditCard12');
 		tooltip.className = "tooltip";
-	}else{
-		var tooltip = document.getElementById('creditCardTooltip');
+	} else {		
+		var tooltip = document.getElementById('requiredConfirmPurchaseCreditCard12');
 		tooltip.className += " visibleTooltip";
 	}
 }
@@ -49,12 +49,12 @@ function validationVerification() {
 	var reg = /^[0-9]{3}$/;
 	var id = document.getElementById('verification').value;
   	var checking = reg.test(id); 
-
-	if(checking){
-		var tooltip = document.getElementById('digitCardTooltip');
+	
+	if (checking || id == "") {
+		var tooltip = document.getElementById('requiredConfirmPurchaseDigitCard3');
 		tooltip.className = "tooltip";
-	}else{
-		var tooltip = document.getElementById('digitCardTooltip');
+	} else {		
+		var tooltip = document.getElementById('requiredConfirmPurchaseDigitCard3');
 		tooltip.className += " visibleTooltip";
 	}
 }
@@ -194,17 +194,69 @@ function validationAddProductButton(event) {
 		isComplete = false;
 	}
 
-	if (price.value == "") {
+	if (photo.value == "") {
 		var tooltip = document.getElementById('requiredAddProductPhoto');
 		tooltip.className += " visibleTooltip";
 		isComplete = false;
 	}
 
 	if (isComplete) {
-		console.log("complitos")
-		//document.getElementById("myFormAddProduct").submit();
+		//console.log("complitos")
+		document.getElementById("myFormAddProduct").submit();
 	}
 }
+
+function validationConfirmPurchaseButton(event) {
+	event.preventDefault();
+	var consignee = document.getElementById('consignee');
+	var fullAddress = document.getElementById('address');
+	var postalCode = document.getElementById('postal');
+	var phoneNumber = document.getElementById('phone');
+	var creditCard = document.getElementById('credit');
+	var codeVerification = document.getElementById('verification');
+	var isComplete = true;
+	
+	if (consignee.value == "") {
+		var tooltip = document.getElementById('requiredConfirmPurchaseConsignee');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (fullAddress.value == "") {
+		var tooltip = document.getElementById('requiredConfirmPurchaseFullAddress');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (postalCode.value == "") {
+		var tooltip = document.getElementById('requiredConfirmPurchasePostalCode');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (phoneNumber.value == "") {
+		var tooltip = document.getElementById('requiredConfirmPurchasePhoneNumber');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (creditCard.value == "") {
+		var tooltip = document.getElementById('requiredConfirmPurchaseCreditCard');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (codeVerification.value == "") {
+		var tooltip = document.getElementById('requiredConfirmPurchaseDigitCard');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (isComplete) {
+		validationPurchase(event);
+	}
+}
+
 
 function inputValid(name, tooltipID) {
 	var input = document.getElementsByName(name)[0];

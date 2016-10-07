@@ -26,26 +26,26 @@
 		
 	<div class="detailProduct">
 		<form id="myFormAddProduct" action="postAddFile.php" method="post" enctype="multipart/form-data" name="addProductForm">
-			<b>Name</b><br>
 			<div class="validationInput">	
+				<b>Name</b>
+				<span id="requiredAddProductName" class="tooltip">Required</span><br>
 				<input id="name" type="text" name="name" oninput="inputValid('name', 'requiredAddProductName')">
-				<span id="requiredAddProductName" class="tooltip">Required</span>
 			</div>
-			<b>Description (max 200 chars)</b><br>
 			<div class="validationInput">	
+				<b>Description (max 200 chars)</b>
+				<span id="requiredAddProductDescription" class="tooltip">Required</span><br>
 				<textarea id="description" name="description" maxlength="200" oninput="inputValid('description', 'requiredAddProductDescription')"></textarea>
-				<span id="requiredAddProductDescription" class="tooltip">Required</span>
 			</div>
-			<b>Price (IDR)</b><br>
 			<div class="validationInput">	
-				<input id="price" type="text" name="price" onchange="inputNumberValid('price', 'requiredAddProductPriceNumber')" oninput="inputValid('price', 'requiredAddProductPrice')">
+				<b>Price (IDR)</b>
 				<span id="requiredAddProductPrice" class="tooltip">Required</span>
-				<span id="requiredAddProductPriceNumber" class="tooltip numberonly">Not valid</span>
+				<span id="requiredAddProductPriceNumber" class="tooltip numberonly">Not valid</span><br>
+				<input id="price" type="text" name="price" onchange="inputNumberValid('price', 'requiredAddProductPriceNumber')" oninput="inputValid('price', 'requiredAddProductPrice')">
 			</div>
-			<b>Photo</b><br>
 			<div class="validationInput">	
+				<b>Photo</b>
+				<span id="requiredAddProductPhoto" class="tooltip">Required</span><br>
 				<input type="file" name="photo" onchange="inputValid('photo', 'requiredAddProductPhoto')">
-				<span id="requiredAddProductPhoto" class="tooltip">Required</span>
 			</div>
 			<br><br>
 			<input type="hidden" value="<php echo $user['id']?>" name="id_active">

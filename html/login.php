@@ -13,16 +13,16 @@
 		<h2>Please Login</h2>
 		<hr>
 		<form id="myFormLogin" action="postLogin.php" method="post" name="loginForm">
-			<b>Email or Username</b><br>
 			<div class="validationInput">	
+				<b>Email or Username</b>
+				<span id="requiredLoginEmail" class="tooltip">Required</span><br>
 				<input class="formValidation" type="text" name="email" oninput="inputValid('email', 'requiredLoginEmail')">
-				<span id="requiredLoginEmail" class="tooltip">Required</span>
 			</div>
 			<br>
-			<b>Password</b><br>
 			<div class="validationInput">
+				<b>Password</b>
+				<span id="requiredLoginPassword" class="tooltip pass">Required</span><br>
 				<input class="formValidation" type="password" name="password" oninput="inputValid('password', 'requiredLoginPassword')">
-				<span id="requiredLoginPassword" class="tooltip pass">Required</span>
 			</div>
 			<br><br>
 			<input type="submit" value="LOGIN" onclick="validationLoginButton(event)">
