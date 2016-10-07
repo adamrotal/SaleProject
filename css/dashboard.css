@@ -421,3 +421,8 @@ button[type="submit"]:hover, button[type="cancel"]:hover, #btnConfirm:hover, #bt
 .dislikeButton{
 	color: red !important;
 }
+
+.idProdukData{
+	visibility: hidden;
+	position: absolute;
+}

@@ -36,7 +36,7 @@
 				<div id="by">by</div><br>
 					<input type="radio" name="category" value="product" <?php ifValueChecked("product",$_GET['category']);?> > product<br>
 					<input type="radio" name="category" value="store" <?php ifValueChecked("store",$_GET['category']);?> > store<br>
-					<input type="hidden" name="id_active" value="<?php echo $user['id'];?>">
+					<input type="hidden" name="id_active" id="idUsernameData" value="<?php echo $user['id'];?>">
 			</div>	
 		</form>
 		
@@ -55,9 +55,10 @@
 								<?php echo $produk['description'];?>
 							</td>
 							<td id="data">
+								<span class="idProdukData"><?php echo $produk['id'];?></span>
 								<span class="nLike"><?php echo $produk['nLike'];?></span> likes <br>
 								<?php echo $produk['nSales'];?> purchase<br><br>
-								<a class="likeButton" href="" onclick="like(this,event)">LIKE</a>
+								<?php isLiked($produk['liked']);?>
 								<a id="buyButton" href="<?php RoutingBuy($produk['id']);?>">BUY</a>
 							</td>
 						</tr>

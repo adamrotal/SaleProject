@@ -11,4 +11,16 @@
 
 	}
 
+	function isLiked($val){
+		if($val == 0){
+			?>
+				<a class="likeButton" href="" onclick="like(this,event)">LIKE</a>
+			<?php
+		}else{
+			?>
+				<a class="likeButton dislikeButton" href="" onclick="like(this,event)">DISLIKE</a>
+			<?php
+		}
+	}
+
 ?>
