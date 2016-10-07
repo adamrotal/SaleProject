@@ -30,14 +30,15 @@
 	<div class="detailProduct">
 		<form action="postEditProduct.php" method="post" enctype="multipart/form-data">
 			<b>Name</b><br>
-			<input id="name" type="text" name="name"></textarea>
+			<input id="name" type="text" name="name" value="<?php echo $produk['name'];?>"></textarea>
 			<b>Description (max 200 chars)</b><br>
-			<textarea id="description" name="description"></textarea>
+			<textarea id="description" name="description"><?php echo $produk['description'];?></textarea>
 			<b>Price (IDR)</b><br>
-			<input id="price" type="text" name="price">
+			<input id="price" type="text" name="price" value="<?php echo $produk['price'];?>">
 			<b>Photo</b><br>
 			<input type="file" name="photo"><br><br>
-			<input type="hidden" value="<php echo $user['id']?>" name="id_active">
+			<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
+			<input type="hidden" value="<?php echo $produk['id'];?>" name="id">
 			<button type="cancel" onclick="#">CANCEL</button>
 			<button type="submit" value="submit">UPDATE</button>
 		</form>
