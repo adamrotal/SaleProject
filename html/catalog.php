@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/dashboard.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="<?php echo $ServerRoot;?>/javascript/like.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -28,14 +29,14 @@
 		<hr>
 		<form action="getCatalog.php" method="get">
 			<div class="searchbox">	
-		        	<input type="text" placeholder="Search catalog..." name="keyword" value= "<?php issetEcho($_GET['keyword']);?>" required>
+		        	<input type="text" placeholder="Search catalog..." name="keyword" value= "<?php issetEcho($keyword);?>" required>
 		            <input id="searching" type="submit" value="GO">
 			</div>
 			<div class="byRadio"">
 				<div id="by">by</div><br>
-					<input type="radio" name="category" value="product" <?php ifValueChecked("product",$_GET['category']);?> > product<br>
-					<input type="radio" name="category" value="store" <?php ifValueChecked("store",$_GET['category']);?> > store<br>
-					<input type="hidden" name="id_active" value="<?php echo $user['id'];?>">
+					<input type="radio" name="category" value="product" <?php ifValueChecked("product",$category);?> > product<br>
+					<input type="radio" name="category" value="store" <?php ifValueChecked("store",$category);?> > store<br>
+					<input type="hidden" name="id_active" id="idUsernameData" value="<?php echo $user['id'];?>">
 			</div>	
 		</form>
 		
@@ -54,9 +55,10 @@
 								<?php echo $produk['description'];?>
 							</td>
 							<td id="data">
-								<?php echo $produk['nLike'];?> likes <br>
+								<span class="idProdukData"><?php echo $produk['id'];?></span>
+								<span class="nLike"><?php echo $produk['nLike'];?></span> likes <br>
 								<?php echo $produk['nSales'];?> purchase<br><br>
-								<a id="likeButton" href="">LIKE</a>
+								<?php isLiked($produk['liked']);?>
 								<a id="buyButton" href="<?php RoutingBuy($produk['id']);?>">BUY</a>
 							</td>
 						</tr>

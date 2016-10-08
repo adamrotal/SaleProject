@@ -28,6 +28,8 @@
 		<h1>Please add your product here</h1>
 		<hr>
 		
+	
+
 		<div class="detailProduct">
 			<form id="myFormAddProduct" action="postAddFile.php" method="post" enctype="multipart/form-data" name="addProductForm">
 				<b>Name</b>
@@ -45,12 +47,17 @@
 				
 				<b>Photo</b>
 				<span id="requiredAddProductPhoto" class="tooltip">Required</span><br>
-				<input type="file" name="photo" onchange="inputValid('photo', 'requiredAddProductPhoto')">
+				<input type="file" name="fileToUpload" onchange="inputValid('fileToUpload', 'requiredAddProductPhoto')">
 				<br>
 				<br>
-				<input type="hidden" value="<php echo $user['id']?>" name="id_active">
-				<button type="cancel" onclick="#">CANCEL</button>
-				<button type="submit" value="submit" onclick="validationAddEditProductButton(event, 'add')">ADD</button>
+
+				<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
+				<button type="cancel" onclick="#" value="cencel">
+					CANCEL
+				</button>
+				<button type="submit" onclick="validationAddProductButton(event)">
+					ADD
+				</button>
 			</form>
 		</div>
 	</div>

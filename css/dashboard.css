@@ -1,3 +1,18 @@
+input[type="submit"]{
+	border-radius: 0px;
+	height: 40px;
+	width: 80px;
+	border: 0px;
+	color: white;
+	background-color: #0066B4;
+	float: right;
+	margin-left: 50px;
+}
+
+input[type="submit"]:hover{
+	background-color: #A30000;
+}
+
 body{
 	font-family: 'Raleway',sans-serif;
 }
@@ -237,7 +252,7 @@ input[type="file"]{
 	vertical-align: top;
 }
 
-#likeButton {
+.likeButton {
 	border-radius: 0px;
 	height: 40px;
 	width: 55px;
@@ -261,7 +276,7 @@ input[type="file"]{
 	background-color: transparent;
 }
 
-#likeButton:hover {
+.likeButton:hover {
 	color: #A30000;
 }
 
@@ -401,4 +416,13 @@ button[type="submit"]:hover, button[type="cancel"]:hover, #btnConfirm:hover, #bt
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.dislikeButton{
+	color: red !important;
+}
+
+.idProdukData{
+	visibility: hidden;
+	position: absolute;
 }

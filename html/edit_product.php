@@ -31,27 +31,28 @@
 	<div class="detailProduct">
 		<form id="myFormEditProduct" action="postEditProduct.php" method="post" enctype="multipart/form-data" name="editProductForm">
 			<b>Name</b>
-			<span id="requiredAddProductName" class="tooltip">Required</span><br>
-			<input id="name" type="text" name="name" oninput="inputValid('name', 'requiredAddProductName')">
+			<span id="requiredEditProductName" class="tooltip">Required</span><br>
+			<input id="name" type="text" name="name" oninput="inputValid('name', 'requiredEditProductName')">
 				
 			<b>Description (max 200 chars)</b>
-			<span id="requiredAddProductDescription" class="tooltip">Required</span><br>
-			<textarea id="description" name="description" maxlength="200" oninput="inputValid('description', 'requiredAddProductDescription')"></textarea>
+			<span id="requiredEditProductDescription" class="tooltip">Required</span><br>
+			<textarea id="description" name="description" maxlength="200" oninput="inputValid('description', 'requiredEditProductDescription')"></textarea>
 				
 			<b>Price (IDR)</b>
-			<span id="requiredAddProductPrice" class="tooltip">Required</span>
-			<span id="requiredAddProductPriceNumber" class="tooltip numberonly">Not valid</span><br>
-			<input id="price" type="text" name="price" onchange="inputNumberValid('price', 'requiredAddProductPriceNumber')" oninput="inputValid('price', 'requiredAddProductPrice')">
+			<span id="requiredEditProductPrice" class="tooltip">Required</span>
+			<span id="requiredEditProductPriceNumber" class="tooltip numberonly">Not valid</span><br>
+			<input id="price" type="text" name="price" onchange="inputNumberValid('price', 'requiredEditProductPriceNumber')" oninput="inputValid('price', 'requiredEditProductPrice')">
 				
 			<b>Photo</b>
-			<span id="requiredAddProductPhoto" class="tooltip">Required</span><br>
-			<input type="file" name="photo" onchange="inputValid('photo', 'requiredAddProductPhoto')">
+			<span id="requiredEditProductPhoto" class="tooltip">Required</span><br>
+			<input type="file" name="photo" onchange="inputValid('photo', 'requiredEditProductPhoto')">
 			<br>
 			<br>
-					
-			<input type="hidden" value="<php echo $user['id']?>" name="id_active">
-			<button type="cancel" onclick="#">CANCEL</button>
-			<button type="submit" value="submit" onclick="validationAddEditProductButton(event, 'edit')">UPDATE</button>
+
+			<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
+			<input type="hidden" value="<?php echo $produk['id'];?>" name="id">
+			<input type="submit" name="submit" value="CANCEL" >
+			<input type="submit" name="submit" value="UPDATE" onclick="validationEditProductButton(event)">
 		</form>
 	</div>
 

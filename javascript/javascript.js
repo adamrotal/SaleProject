@@ -155,26 +155,13 @@ function validationRegisterButton(event) {
 	}	
 }
 
-function validationAddEditProductButton(event, page) {
+function validationAddProductButton(event) {
 	event.preventDefault();
+	var name = document.addProductForm.name;
+	var description = document.addProductForm.description;
+	var price = document.addProductForm.price;
+	var photo = document.addProductForm.fileToUpload;
 	
-	if (page = 'add') {
-		console.log("masuk add");		
-		var name = document.addProductForm.name;
-		var description = document.addProductForm.description;
-		var price = document.addProductForm.price;
-		var photo = document.addProductForm.photo;
-	} else if (page = 'edit') {
-		console.log("masuk edit");
-		var name = document.editProductForm.name;
-		var description = document.editProductForm.description;
-		var price = document.editProductForm.price;
-		var photo = document.editProductForm.photo;
-	} else {
-		console.log("kuy");
-		return false;
-	}
-
 	var isComplete = true;
 	
 	if (name.value == "") {
@@ -193,6 +180,13 @@ function validationAddEditProductButton(event, page) {
 		var tooltip = document.getElementById('requiredAddProductPrice');
 		tooltip.className += " visibleTooltip";
 		isComplete = false;
+	} else {
+		var reg = new RegExp('^\\d+$');
+		var checkingNumber = reg.test(price.value);
+		if (!checkingNumber) {
+			isComplete = false;
+		}
+	
 	}
 
 	if (photo.value == "") {
@@ -202,13 +196,53 @@ function validationAddEditProductButton(event, page) {
 	}
 
 	if (isComplete) {
-		if (page = "add") {
-			console.log("masuk add");
-			//document.getElementById("myFormAddProduct").submit();
-		} else if (page = "edit") {
-			console.log("masuk edit");
-			//document.getElementById("myFormEditProduct").submit();
+		//console.log("masuk add");
+		document.getElementById("myFormAddProduct").submit();
+	}
+}
+
+function validationEditProductButton(event) {
+	event.preventDefault();
+	var name = document.editProductForm.name;
+	var description = document.editProductForm.description;
+	var price = document.editProductForm.price;
+	var photo = document.editProductForm.photo;
+	isComplete = true;
+
+	if (name.value == "") {
+		var tooltip = document.getElementById('requiredEditProductName');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (description.value == "") {
+		var tooltip = document.getElementById('requiredEditProductDescription');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (price.value == "") {
+		var tooltip = document.getElementById('requiredEditProductPrice');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	} else {
+		var reg = new RegExp('^\\d+$');
+		var checkingNumber = reg.test(price.value);
+		if (!checkingNumber) {
+			isComplete = false;
 		}
+	
+	}
+
+	if (photo.value == "") {
+		var tooltip = document.getElementById('requiredEditProductPhoto');
+		tooltip.className += " visibleTooltip";
+		isComplete = false;
+	}
+
+	if (isComplete) {
+		//console.log("masuk edit");
+		document.getElementById("myFormEditProduct").submit();
 	}
 }
 
