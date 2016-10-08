@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/dashboard.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="<?php echo $ServerRoot;?>/javascript/javascript.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -28,21 +29,30 @@
 		<hr>
 		
 	<div class="detailProduct">
-		<form action="postEditProduct.php" method="post" enctype="multipart/form-data">
-			<b>Name</b><br>
-			<input id="name" type="text" name="name" value="<?php echo $produk['name'];?>"></textarea>
-			<b>Description (max 200 chars)</b><br>
-			<textarea id="description" name="description"><?php echo $produk['description'];?></textarea>
-			<b>Price (IDR)</b><br>
-			<input id="price" type="text" name="price" value="<?php echo $produk['price'];?>">
-			<b>Photo</b><br>
-			<input type="file" name="photo" disabled=""><br><br>
+		<form id="myFormEditProduct" action="postEditProduct.php" method="post" enctype="multipart/form-data" name="editProductForm">
+			<b>Name</b>
+			<span id="requiredEditProductName" class="tooltip">Required</span><br>
+			<input id="name" type="text" name="name" oninput="inputValid('name', 'requiredEditProductName')">
+				
+			<b>Description (max 200 chars)</b>
+			<span id="requiredEditProductDescription" class="tooltip">Required</span><br>
+			<textarea id="description" name="description" maxlength="200" oninput="inputValid('description', 'requiredEditProductDescription')"></textarea>
+				
+			<b>Price (IDR)</b>
+			<span id="requiredEditProductPrice" class="tooltip">Required</span>
+			<span id="requiredEditProductPriceNumber" class="tooltip numberonly">Not valid</span><br>
+			<input id="price" type="text" name="price" onchange="inputNumberValid('price', 'requiredEditProductPriceNumber')" oninput="inputValid('price', 'requiredEditProductPrice')">
+				
+			<b>Photo</b>
+			<span id="requiredEditProductPhoto" class="tooltip">Required</span><br>
+			<input type="file" name="photo" onchange="inputValid('photo', 'requiredEditProductPhoto')">
+			<br>
+			<br>
+
 			<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
 			<input type="hidden" value="<?php echo $produk['id'];?>" name="id">
 			<input type="submit" name="submit" value="CANCEL" >
-			<input type="submit" name="submit" value="UPDATE" >
-			<!--button type="cancel" onclick="#">CANCEL</button>
-			<button type="submit" value="submit">UPDATE</button-->
+			<input type="submit" name="submit" value="UPDATE" onclick="validationEditProductButton(event)">
 		</form>
 	</div>
 

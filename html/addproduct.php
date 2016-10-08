@@ -47,12 +47,17 @@
 				
 				<b>Photo</b>
 				<span id="requiredAddProductPhoto" class="tooltip">Required</span><br>
-				<input type="file" name="fileToUpload" onchange="inputValid('photo', 'requiredAddProductPhoto')">
+				<input type="file" name="fileToUpload" onchange="inputValid('fileToUpload', 'requiredAddProductPhoto')">
 				<br>
 				<br>
+
 				<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
-				<button type="cancel" onclick="#" value="cencel">CANCEL</button>
-				<button type="submit" onclick="validationAddProductButton(event)">ADD</button>
+				<button type="cancel" onclick="#" value="cencel">
+					CANCEL
+				</button>
+				<button type="submit" onclick="validationAddProductButton(event)">
+					ADD
+				</button>
 			</form>
 		</div>
 	</div>

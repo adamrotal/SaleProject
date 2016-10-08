@@ -29,7 +29,7 @@
 		<hr>
 		<form id="myFormConfirmation_Purchase" action="postConfirmationPurchase.php" method="post">
 			<div class="remainder">	
-				<span class="product">Product</span>  : Sembarang<br>
+				<span class="product">Product</span>  : <?php echo ($produk['name']);?><br>
 				<input id="initialPrice" type="hidden" name="initPrice" value="<?php echo $produk['price'];?>"> 
 				<span class="price">Price</span> : IDR <span id="aPrice"><?php echo number_format($produk['price']);?></span><br>
 				<span class="qual">Quantity</span> : <input id="quantity" type="number" value="1" name="kuantitas" oninput="countPrice()"> PCS<br>
@@ -77,7 +77,7 @@
 				<input type="hidden" name="idPenjual" value="<?php echo $produk['idPenjual'];?>">
 				<button id="btnCancel" value="CANCEL" name="action">CANCEL</button>
 				<button id="btnConfirm" value="CONFIRM" name="action" onclick="validationConfirmPurchaseButton(event)">CONFIRM</button>
-				<div id="myModal" class="modal">
+				<div id="myPurchaseModal" class="modal">
 					<div class="modal-content">
 					    <span class="btnNoModal">no</span>
 					    <span class="btnYesModal">yes</span>
