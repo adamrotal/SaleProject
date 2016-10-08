@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $ServerRoot;?>/css/dashboard.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="<?php echo $ServerRoot;?>/javascript/javascript.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -45,11 +46,19 @@
 								<?php echo $produk['nLike'];?> likes <br>
 								<?php echo $produk['nSales'];?> purchase<br><br>
 								<a id="editButton" href="<?php RoutingEdit($produk['id']);?>"><b>EDIT<b></a>
-								<a id="deleteButton" href="<?php RoutingDelete($produk['id']);?>"><b>DELETE<b></a>
+								<a id="deleteButton" href="<?php RoutingDelete($produk['id']);?>" onclick="validationDelete(event)"><b>DELETE<b></a>
 							</td>
 						</tr>
 					</table>
 					<hr>
+					<div id="myDeleteModal" class="modal">
+					<div class="modal-content">
+					    <span class="btnNoModal">no</span>
+					    <span class="btnYesModal">yes</span>
+					    <p>Do you really want to delete the form?</p>
+					</div>
+
+				</div>
 				</div>
 	<?php 	}
 

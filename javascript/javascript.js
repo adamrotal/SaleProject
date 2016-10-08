@@ -15,9 +15,28 @@ function countPrice() {
 	}
 }
 
+function validationDelete(event) {
+	event.preventDefault();
+	var modal = document.getElementById('myDeleteModal');
+	var spanYes = document.getElementsByClassName("btnYesModal")[0];
+	var spanNo = document.getElementsByClassName("btnNoModal")[0];
+
+	modal.style.display = "block";
+
+	spanNo.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	spanYes.onclick = function() {
+		console.log("yay delete");
+		window.location.href = document.getElementById("deleteButton").href;
+		console.log("hmm")
+	}
+}
+
 function validationPurchase(event) {
 	event.preventDefault();
-	var modal = document.getElementById('myModal');
+	var modal = document.getElementById('myPurchaseModal');
 	//var btn = document.getElementById("btnConfirm");
 	var spanYes = document.getElementsByClassName("btnYesModal")[0];
 	var spanNo = document.getElementsByClassName("btnNoModal")[0];
