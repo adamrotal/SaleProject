@@ -254,4 +254,10 @@
 		return $result;
 	}
 
+	function toDateFormat($sqlDate) {
+		date_default_timezone_set("Asia/Jakarta");
+		$date = strtotime($sqlDate);
+		return date("l, j F Y", $date);
+	}
+
 ?>

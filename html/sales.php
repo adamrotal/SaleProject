@@ -30,8 +30,7 @@
 		<?php if(isset($produks)){
 			foreach ($produks as $produk) {?>
 				<div class="sales">
-					<b>Sunday, <?php echo $produk['tanggal'];?></b><br>
-					at 12.00<br>
+					<b><?php echo toDateFormat($produk['tanggal']);?></b><br>
 					<hr>
 					<table id="produk"  cellpadding="10">
 						<tr>
