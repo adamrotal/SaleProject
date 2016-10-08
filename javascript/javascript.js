@@ -15,7 +15,7 @@ function countPrice() {
 	}
 }
 
-function validationDelete(event) {
+function validationDelete(obj,event) {
 	event.preventDefault();
 	var modal = document.getElementById('myDeleteModal');
 	var spanYes = document.getElementsByClassName("btnYesModal")[0];
@@ -29,7 +29,7 @@ function validationDelete(event) {
 
 	spanYes.onclick = function() {
 		//console.log("yay delete");
-		window.location.href = document.getElementById("deleteButton").href;
+		window.location.href = obj.href;
 		//console.log("hmm")
 	}
 }
