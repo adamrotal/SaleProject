@@ -175,11 +175,12 @@ function validationRegisterButton(event) {
 }
 
 function validationAddProductButton(event) {
-	event.preventDefault();
+	
+	document.getElementById("action").value = "add";
 	var name = document.addProductForm.name;
 	var description = document.addProductForm.description;
 	var price = document.addProductForm.price;
-	var photo = document.addProductForm.fileToUpload;
+	var photo = document.addProductForm.photo;
 	
 	var isComplete = true;
 	
@@ -213,31 +214,21 @@ function validationAddProductButton(event) {
 		tooltip.className += " visibleTooltip";
 		isComplete = false;
 	}
+	
 
-	if (isComplete) {
-		//console.log("masuk add");
-		document.getElementById("myFormAddProduct").submit();
-	}
+	return isComplete;
+	
 }
 
 function cancelButtonAddProduct(event) {
-	event.preventDefault();
-	var id = document.getElementsByName('id_active')[0];
-	var route = document.getElementsByName('routeToCatalog')[0];
-	//var url = document.getElementById('cancelBtnAddProduct').href;
-	console.log(id.value);
-	console.log(route.value);
-	//var link = id.split("Tugas1/");getCatalog.php?id_active=4
-	var link = "http://localhost/Tugas1/getCatalog.php?id_active=" + id;
-	//console.log(link)
-	console.log(route.value);
-	//console.log(window.location.href);
-	window.location = route;
-	//console.log("manstap");
+	
+	document.getElementById("action").value = "cancel";
+	return true;
+	
 }
 
 function validationEditProductButton(event) {
-	event.preventDefault();
+	
 	var name = document.editProductForm.name;
 	var description = document.editProductForm.description;
 	var price = document.editProductForm.price;
@@ -269,21 +260,13 @@ function validationEditProductButton(event) {
 	
 	}
 
-	// if (photo.value == "") {
-	// 	var tooltip = document.getElementById('requiredEditProductPhoto');
-	// 	tooltip.className += " visibleTooltip";
-	// 	isComplete = false;
-	// }
-
-	if (isComplete) {
-		//console.log("masuk edit");
-		//return true;
-		document.getElementById('myFormEditProduct').submit();
-	}
+	
+	return isComplete;
+	
 }
 
 function validationConfirmPurchaseButton(event) {
-	event.preventDefault();
+	//event.preventDefault();
 	var consignee = document.getElementById('consignee');
 	var fullAddress = document.getElementById('address');
 	var postalCode = document.getElementById('postal');
@@ -328,9 +311,10 @@ function validationConfirmPurchaseButton(event) {
 		isComplete = false;
 	}
 
-	if (isComplete) {
-		validationPurchase(event);
-	}
+	return isComplete;
+	//if (isComplete) {
+	//	validationPurchase(event);
+	//}
 }
 
 

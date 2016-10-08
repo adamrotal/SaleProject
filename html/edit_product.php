@@ -51,7 +51,7 @@
 
 			<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
 			<input type="hidden" value="<?php echo $produk['id'];?>" name="id">
-			<input type="submit" name="btnEdit" value="CANCEL" >
+			<input type="submit" name="btnEdit" value="CANCEL" onclick ="validationEditProductButton(event)">
 			<input type="submit" name="btnEdit" value="UPDATE" >
 		</form>
 	</div>

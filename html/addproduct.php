@@ -48,16 +48,16 @@
 				
 				<b>Photo</b>
 				<span id="requiredAddProductPhoto" class="tooltip">Required</span><br>
-				<input type="file" name="fileToUpload" onchange="inputValid('fileToUpload', 'requiredAddProductPhoto')">
+				<input type="file" name="photo" onchange="inputValid('fileToUpload', 'requiredAddProductPhoto')">
 				<br>
 				<br>
-
+				<input type="hidden" name="submit" id="action">
 				<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
 				<input type="hidden" value="<?php RoutingDashboard('getCatalog.php');?>" name="routeToCatalog">
-				<button type="button" value="cencel" onclick="cancelButtonAddProduct(event)">
+				<button type="submit" onclick="return cancelButtonAddProduct(event)">
 					CANCEL
 				</button>
-				<button type="submit" onclick="validationAddProductButton(event)">
+				<button type="submit" onclick="return validationAddProductButton(event)">
 					ADD
 				</button>
 			</form>
