@@ -14,45 +14,45 @@ Anda diminta untuk membuat tampilan sedemikian hingga mirip dengan tampilan pada
 
 ## Tampilan Website
 
-* ### Login
+### Login
 
 ![](mocks/login.png)
 
-* ### Register
+### Register
 
 ![](mocks/registrasi.png)
 
-* ### Catalog
+### Catalog
 
 ![](mocks/catalog.png)
 
-* ### Confirmation Purchase
+### Confirmation Purchase
 
 ![](mocks/confirmation_purchase.png)
 
-* ### Your Products
+### Your Products
 
 ![](mocks/your_product.png)
 
-* ### Add Product
+### Add Product
 
 ![](mocks/add_product.png)
 
-* ### Edit Product
+### Edit Product
 
 ![](mocks/update_product.png)
 
-* ### Sales
+### Sales
 
 ![](mocks/sales.png)
 
-* ### Purchases
+### Purchases
 
 ![](mocks/purchase.png)
 
 ### Validasi
 
-* ### Form Validation
+### Form Validation
 
 ![](mocks/form_verification.png)
 
