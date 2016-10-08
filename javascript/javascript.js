@@ -136,6 +136,12 @@ function validationRegisterButton(event) {
 		var tooltip = document.getElementById('requiredRegisterEmail');
 		tooltip.className += " visibleTooltip";
 		isComplete = false;
+	} else {
+		var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		var checkingFormat = reg.test(email.value);
+		if (!checkingFormat) {
+			isComplete = false;
+		}
 	}
 
 	if (pass.value == "") {
@@ -166,6 +172,12 @@ function validationRegisterButton(event) {
 		var tooltip = document.getElementById('requiredRegisterPhoneNumber');
 		tooltip.className += " visibleTooltip";
 		isComplete = false;
+	} else {
+		var reg = new RegExp('^\\d+$');
+		var checkingNumber = reg.test(phoneNumber.value);
+		if (!checkingNumber) {
+			isComplete = false;
+		}
 	}
 
 
@@ -266,7 +278,7 @@ function validationEditProductButton(event) {
 }
 
 function validationConfirmPurchaseButton(event) {
-	//event.preventDefault();
+	event.preventDefault();
 	var consignee = document.getElementById('consignee');
 	var fullAddress = document.getElementById('address');
 	var postalCode = document.getElementById('postal');
@@ -297,6 +309,12 @@ function validationConfirmPurchaseButton(event) {
 		var tooltip = document.getElementById('requiredConfirmPurchasePhoneNumber');
 		tooltip.className += " visibleTooltip";
 		isComplete = false;
+	} else {
+		var reg = new RegExp('^\\d+$');
+		var checkingNumber = reg.test(phoneNumber.value);
+		if (!checkingNumber) {
+			isComplete = false;
+		}
 	}
 
 	if (creditCard.value == "") {
@@ -311,10 +329,10 @@ function validationConfirmPurchaseButton(event) {
 		isComplete = false;
 	}
 
-	return isComplete;
-	//if (isComplete) {
-	//	validationPurchase(event);
-	//}
+	//return isComplete;
+	if (isComplete) {
+		validationPurchase(event);
+	}
 }
 
 
@@ -356,10 +374,25 @@ function inputEmailValid(nama, tooltipID) {
 	if (checkingFormat || email.value == "") {
 		var tooltip = document.getElementById(tooltipID);
 		tooltip.className = "tooltip";
-		console.log("email valid");
+		//console.log("email valid");
 	} else {		
 		var tooltip = document.getElementById(tooltipID);
 		tooltip.className += " visibleTooltip";
-		console.log("email not valid")
+		//console.log("email not valid")
+	}
+}
+
+function inputDescription200(nama, tooltipID) {
+	var field = document.getElementById('description');
+
+	if (field.value.length > 200) {
+		//
+		field.value = field.value.substring(0, 200);
+
+		var tooltip = document.getElementById(tooltipID);
+		tooltip.className += " visibleTooltip";
+	} else {
+		var tooltip = document.getElementById(tooltipID);
+		tooltip.className = "tooltip";
 	}
 }

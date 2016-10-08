@@ -48,7 +48,7 @@
 				
 				<b>Photo</b>
 				<span id="requiredAddProductPhoto" class="tooltip">Required</span><br>
-				<input type="file" name="photo" onchange="inputValid('fileToUpload', 'requiredAddProductPhoto')">
+				<input type="file" name="photo" onchange="inputValid('photo', 'requiredAddProductPhoto')">
 				<br>
 				<br>
 				<input type="hidden" name="submit" id="action">
