@@ -31,8 +31,7 @@
 		<?php if(isset($produks)){
 			foreach ($produks as $produk) {?>
 				<div class="catalog">
-					<b><?php echo $produk['usernamePenjual'];?></b><br>
-					added this on <?php echo $produk['tanggalDiTambah'];?><br>
+					<b><?php echo toDateFormat($produk['tanggalDiTambah']);?></b><br>
 					<hr>
 					<table id="produk"  cellpadding="10">
 						<tr>
