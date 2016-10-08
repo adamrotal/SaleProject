@@ -155,12 +155,26 @@ function validationRegisterButton(event) {
 	}	
 }
 
-function validationAddProductButton(event) {
+function validationAddEditProductButton(event, page) {
 	event.preventDefault();
-	var name = document.addProductForm.name;
-	var description = document.addProductForm.description;
-	var price = document.addProductForm.price;
-	var photo = document.addProductForm.photo;
+	
+	if (page = 'add') {
+		console.log("masuk add");		
+		var name = document.addProductForm.name;
+		var description = document.addProductForm.description;
+		var price = document.addProductForm.price;
+		var photo = document.addProductForm.photo;
+	} else if (page = 'edit') {
+		console.log("masuk edit");
+		var name = document.editProductForm.name;
+		var description = document.editProductForm.description;
+		var price = document.editProductForm.price;
+		var photo = document.editProductForm.photo;
+	} else {
+		console.log("kuy");
+		return false;
+	}
+
 	var isComplete = true;
 	
 	if (name.value == "") {
@@ -188,8 +202,13 @@ function validationAddProductButton(event) {
 	}
 
 	if (isComplete) {
-		//console.log("complitos")
-		document.getElementById("myFormAddProduct").submit();
+		if (page = "add") {
+			console.log("masuk add");
+			//document.getElementById("myFormAddProduct").submit();
+		} else if (page = "edit") {
+			console.log("masuk edit");
+			//document.getElementById("myFormEditProduct").submit();
+		}
 	}
 }
 
