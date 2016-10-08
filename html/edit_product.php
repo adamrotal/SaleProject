@@ -35,8 +35,9 @@
 			<input id="name" type="text" name="name" value="<?php echo $produk['name'];?>" oninput="inputValid('name', 'requiredEditProductName')">
 				
 			<b>Description (max 200 chars)</b>
-			<span id="requiredEditProductDescription" class="tooltip">Required</span><br>
-			<textarea id="description" name="description" maxlength="200" oninput="inputValid('description', 'requiredEditProductDescription')"><?php echo $produk['description'];?></textarea>
+			<span id="requiredEditProductDescription" class="tooltip">Required</span>
+			<span id="maxDescriptionEditProduct" class="tooltip">max</span><br>
+			<textarea id="description" name="description" oninput="inputValid('description', 'requiredEditProductDescription')" onkeydown="inputDescription200('description', 'maxDescriptionEditProduct')" onkeyup="inputDescription200('description', 'maxDescriptionEditProduct')"> <?php echo $produk['description'];?></textarea>
 				
 			<b>Price (IDR)</b>
 			<span id="requiredEditProductPrice" class="tooltip">Required</span>
@@ -51,8 +52,8 @@
 
 			<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
 			<input type="hidden" value="<?php echo $produk['id'];?>" name="id">
-			<input type="submit" name="btnEdit" value="CANCEL" onclick ="validationEditProductButton(event)">
-			<input type="submit" name="btnEdit" value="UPDATE" >
+			<input type="submit" name="btnEdit" value="CANCEL" >
+			<input type="submit" name="btnEdit" value="UPDATE" onclick ="validationEditProductButton(event)">
 		</form>
 	</div>
 

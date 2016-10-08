@@ -28,9 +28,9 @@ function validationDelete(event) {
 	}
 
 	spanYes.onclick = function() {
-		console.log("yay delete");
+		//console.log("yay delete");
 		window.location.href = document.getElementById("deleteButton").href;
-		console.log("hmm")
+		//console.log("hmm")
 	}
 }
 
@@ -240,7 +240,6 @@ function cancelButtonAddProduct(event) {
 }
 
 function validationEditProductButton(event) {
-	
 	var name = document.editProductForm.name;
 	var description = document.editProductForm.description;
 	var price = document.editProductForm.price;
@@ -273,7 +272,10 @@ function validationEditProductButton(event) {
 	}
 
 	
-	return isComplete;
+	if (isComplete) {
+		//console.log('valid')
+		document.getElementById("myFormEditProduct").submit();
+	}
 	
 }
 
