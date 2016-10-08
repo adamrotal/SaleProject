@@ -3,7 +3,7 @@
     $_GET["id_active"] = $_POST["id_active"];
     $user = authentification();
 
-    if($_POST["submit"] == "UPDATE"){
+    if($_POST["btnEdit"] == "UPDATE"){
         $name = $_POST['name'];
         $description = $_POST['description'];
         $price = $_POST['price'];
