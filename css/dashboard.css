@@ -1,13 +1,14 @@
 input[type="submit"]{
 	border-radius: 0px;
 	height: 40px;
-	width: 80px;
+	width: 100px;
 	border: 0px;
 	color: white;
 	background-color: #0066B4;
 	float: right;
-	margin-left: 50px;
+	margin-left: 20px;
 }
+
 
 input[type="submit"]:hover{
 	background-color: #A30000;
@@ -308,7 +309,7 @@ textarea#description, textarea#address {
 	border: solid black 1px;
 }
 
-button[type="submit"], button[type="cancel"], #btnConfirm, #btnCancel{
+button[type="submit"], button[type="button"], #btnConfirm, #btnCancel{
 	border-radius: 0px;
 	height: 40px;
 	width: 100px;
@@ -319,7 +320,7 @@ button[type="submit"], button[type="cancel"], #btnConfirm, #btnCancel{
 	float: right;
 }
 
-button[type="submit"]:hover, button[type="cancel"]:hover, #btnConfirm:hover, #btnCancel:hover{
+button[type="submit"]:hover, button[type="button"]:hover, #btnConfirm:hover, #btnCancel:hover{
 	background-color: #A30000;
 }
 

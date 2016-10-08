@@ -37,8 +37,9 @@
 				<input id="name" type="text" name="name" oninput="inputValid('name', 'requiredAddProductName')">
 				
 				<b>Description (max 200 chars)</b>
-				<span id="requiredAddProductDescription" class="tooltip">Required</span><br>
-				<textarea id="description" name="description" maxlength="200" oninput="inputValid('description', 'requiredAddProductDescription')"></textarea>
+				<span id="requiredAddProductDescription" class="tooltip">Required</span>
+				<span id="maxDescriptionAddProduct" class="tooltip">max</span><br>
+				<textarea id="description" name="description" oninput="inputValid('description', 'requiredAddProductDescription')" onkeydown="inputDescription200('description', 'maxDescriptionAddProduct')" onkeyup="inputDescription200('description', 'maxDescriptionAddProduct')"></textarea>
 				
 				<b>Price (IDR)</b>
 				<span id="requiredAddProductPrice" class="tooltip">Required</span>
@@ -52,7 +53,8 @@
 				<br>
 
 				<input type="hidden" value="<?php echo $user['id'];?>" name="id_active">
-				<button type="cancel" onclick="#" value="cencel">
+				<input type="hidden" value="<?php RoutingDashboard('getCatalog.php');?>" name="routeToCatalog">
+				<button type="button" value="cencel" onclick="cancelButtonAddProduct(event)">
 					CANCEL
 				</button>
 				<button type="submit" onclick="validationAddProductButton(event)">

@@ -220,6 +220,22 @@ function validationAddProductButton(event) {
 	}
 }
 
+function cancelButtonAddProduct(event) {
+	event.preventDefault();
+	var id = document.getElementsByName('id_active')[0];
+	var route = document.getElementsByName('routeToCatalog')[0];
+	//var url = document.getElementById('cancelBtnAddProduct').href;
+	console.log(id.value);
+	console.log(route.value);
+	//var link = id.split("Tugas1/");getCatalog.php?id_active=4
+	var link = "http://localhost/Tugas1/getCatalog.php?id_active=" + id;
+	//console.log(link)
+	console.log(route.value);
+	//console.log(window.location.href);
+	window.location = route;
+	//console.log("manstap");
+}
+
 function validationEditProductButton(event) {
 	event.preventDefault();
 	var name = document.editProductForm.name;
@@ -253,15 +269,16 @@ function validationEditProductButton(event) {
 	
 	}
 
-	if (photo.value == "") {
-		var tooltip = document.getElementById('requiredEditProductPhoto');
-		tooltip.className += " visibleTooltip";
-		isComplete = false;
-	}
+	// if (photo.value == "") {
+	// 	var tooltip = document.getElementById('requiredEditProductPhoto');
+	// 	tooltip.className += " visibleTooltip";
+	// 	isComplete = false;
+	// }
 
 	if (isComplete) {
 		//console.log("masuk edit");
-		document.getElementById("myFormEditProduct").submit();
+		//return true;
+		document.getElementById('myFormEditProduct').submit();
 	}
 }
 
